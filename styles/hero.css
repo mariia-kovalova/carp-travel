@@ -1,0 +1,28 @@
+.hero {
+  position: relative;
+  z-index: 1;
+  background-image: linear-gradient(to right, #020f0880, #020f0880),
+    url('/images/home@x1.jpg');
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+
+  width: 100%;
+  height: 290px;
+
+  opacity: 0.5;
+  background: linear-gradient(180deg, #001826 0%, rgba(0, 37, 49, 0) 100%);
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, #020f0880, #020f0880),
+      url('/images/home@x2.jpg');
+  }
+}

@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .section-title {
+    @apply text-[40px]  font-thin leading-[56px] tracking-[-1.6px] uppercase tablet:text-[67px] tablet:leading-tight tablet:tracking-[-2.68px] desktop:text-[98px] desktop:leading-tight desktop:tracking-[-3.92px];
+  }
+  .section-description {
+    @apply text-[14px] font-extralight leading-[20px] tablet:text-[16px] desktop:text-[18px] desktop:leading-[24px];
+  }
+  .background-image {
+    @apply bg-no-repeat bg-center bg-cover;
+  }
+}

@@ -1,0 +1,35 @@
+.service-1 {
+  background-image: linear-gradient(to right, #020f0880, #020f0880),
+    url('/images/services@x1.jpg');
+}
+
+.service-2 {
+  background-image: linear-gradient(to right, #020f0880, #020f0880),
+    url('/images/hero@x1.jpg');
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  z-index: 2;
+
+  width: 100%;
+  height: 180px;
+
+  opacity: 0.25;
+  background: linear-gradient(180deg, #001826 0%, rgba(0, 37, 49, 0) 100%);
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .service-1 {
+    background-image: linear-gradient(to right, #020f0880, #020f0880),
+      url('/images/services@x2.jpg');
+  }
+  .service-2 {
+    background-image: linear-gradient(to right, #020f0880, #020f0880),
+      url('/images/hero@x2.jpg');
+  }
+}
