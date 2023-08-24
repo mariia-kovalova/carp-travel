@@ -34,7 +34,7 @@ const Gallery = () => {
   return (
     <section className="gallery background-image min-h-screen" id={gallery}>
       <div className="container container-padding">
-        <h2 className="section-title mb-[24px] tablet:max-desktop:mb-[72px]">
+        <h2 className="section-title mb-[24px] tablet:mb-[72px]">
           our <span className="font-medium">gallery</span>
         </h2>
         <ul className="flex flex-col gap-[24px] tablet:hidden">
