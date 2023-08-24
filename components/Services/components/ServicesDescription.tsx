@@ -34,7 +34,7 @@ const ServicesDescription: FC<IProps> = ({
       >
         {call}
       </p>
-      <p className="section-description tablet:text-[13px] tablet:text-justify">
+      <p className="section-description tablet:text-justify tablet:max-desktop:text-[13px]">
         {description}
       </p>
     </div>

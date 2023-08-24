@@ -4,15 +4,15 @@ const LINKS = {
   services: 'services',
   career: 'career',
   gallery: 'gallery',
-  contacts: 'contacts',
+  contact: 'contact',
 };
 
-export const { hero, about, career, contacts, gallery, services } = LINKS;
+export const { hero, about, career, contact, gallery, services } = LINKS;
 
 export const NavBarLinks = [
   { href: `#${about}`, title: 'About' },
   { href: `#${services}`, title: 'Services' },
   { href: `#${career}`, title: 'Career' },
   { href: `#${gallery}`, title: 'Gallery' },
-  { href: `#${contacts}`, title: 'Contacts' },
+  { href: `#${contact}`, title: 'Contacts' },
 ];

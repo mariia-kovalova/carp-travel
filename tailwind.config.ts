@@ -23,6 +23,7 @@ const config: Config = {
     },
     extend: {
       colors: {
+        error: '#ff5757',
         'fall-back': '#396366',
         'dark-gray': 'rgba(1, 10, 5, 0.75)',
         'transparent-white-light-accent': 'rgba(255, 255, 255, 0.20)',

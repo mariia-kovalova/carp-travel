@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+  .container-padding {
+    @apply py-[56px] tablet:py-[64px] desktop:py-[104px];
+  }
   .section-title {
     @apply text-[40px]  font-thin leading-[56px] tracking-[-1.6px] uppercase tablet:text-[67px] tablet:leading-tight tablet:tracking-[-2.68px] desktop:text-[98px] desktop:leading-tight desktop:tracking-[-3.92px];
   }
@@ -12,4 +15,18 @@
   .background-image {
     @apply bg-no-repeat bg-center bg-cover;
   }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

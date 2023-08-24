@@ -5,11 +5,7 @@ import '@/styles/about.css';
 
 const About = () => (
   <section className="about background-image min-h-screen" id={about}>
-    <div
-      className="container py-[55px]
-                      tablet:py-[64px]
-                      desktop:py-[107px]"
-    >
+    <div className="container container-padding">
       <AboutTitle />
       <AboutDescription />
     </div>

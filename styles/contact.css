@@ -1,0 +1,41 @@
+.contact {
+  position: relative;
+  z-index: 1;
+  background-image: linear-gradient(to right, #020f0880, #020f0880),
+    url('/images/contact@x1.jpg');
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+
+  width: 100%;
+  height: 290px;
+
+  opacity: 0.75;
+  background: linear-gradient(180deg, #001826 0%, rgba(0, 37, 49, 0) 100%);
+}
+
+.contact::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  z-index: -1;
+
+  width: 100%;
+  height: 290px;
+
+  opacity: 0.75;
+  background: linear-gradient(180deg, rgba(0, 37, 49, 0) 0%, #001826 100%);
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .contact {
+    background-image: linear-gradient(to right, #020f0880, #020f0880),
+      url('/images/contact@x2.jpg');
+  }
+}
