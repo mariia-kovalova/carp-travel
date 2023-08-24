@@ -1,7 +1,7 @@
 .gallery {
   position: relative;
   z-index: 1;
-  background-image: linear-gradient(to right, #020f0880, #020f0880),
+  background-image: linear-gradient(to right, #020f08d9, #020f08bf),
     url('/images/gallery@x1.jpg');
 }
 
@@ -35,7 +35,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .gallery {
-    background-image: linear-gradient(to right, #020f0880, #020f0880),
+    background-image: linear-gradient(to right, #020f08bf, #020f08bf),
       url('/images/gallery@x2.jpg');
   }
 }

@@ -10,7 +10,7 @@ interface IProps {
 const Textarea: FC<IProps> = ({ id, inputName, label, register }) => {
   return (
     <div
-      className="flex flex-col gap-[4px] 
+      className="w-full h-full flex flex-col gap-[4px] 
                     tablet:flex-grow
                     desktop:gap-[6px]"
     >
@@ -23,8 +23,7 @@ const Textarea: FC<IProps> = ({ id, inputName, label, register }) => {
       <textarea
         id={id}
         {...register(inputName)}
-        className="h-[196px] w-full p-[8px] bg-transparent-white-dark resize-none
-                   tablet:h-[228px] desktop:w-[292px] desktop:h-[268px]"
+        className="block h-full w-full p-[8px] bg-transparent-white-dark resize-none"
       />
     </div>
   );

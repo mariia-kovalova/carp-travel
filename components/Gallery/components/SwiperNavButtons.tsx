@@ -14,13 +14,13 @@ export const SwiperNavButtons = () => {
         className="text-[25px] font-thin uppercase desktop:text-[33px]"
         onClick={() => swiper.slidePrev()}
       >
-        Prev
+        back
       </button>
       <button
         className="text-[25px] font-thin uppercase desktop:text-[33px]"
         onClick={() => swiper.slideNext()}
       >
-        Next
+        next
       </button>
     </div>
   );

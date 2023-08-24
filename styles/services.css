@@ -9,7 +9,7 @@
   width: 100%;
   height: 180px;
 
-  opacity: 0.25;
+  opacity: 0.75;
   background: linear-gradient(180deg, #001826 0%, rgba(0, 37, 49, 0) 100%);
 }
 
@@ -21,32 +21,32 @@
   width: 100%;
   height: 180px;
 
-  opacity: 0.25;
+  opacity: 0.75;
   background: linear-gradient(180deg, rgba(0, 37, 49, 0) 0%, #001826 100%);
 }
 
 .service-1 {
-  background-image: linear-gradient(to right, #020f0880, #020f0880),
+  background-image: linear-gradient(to right, #020f08bf, #020f08bf),
     url('/images/services-1@x1.jpg');
 }
 
 .service-2 {
-  background-image: linear-gradient(to right, #020f0880, #020f0880),
+  background-image: linear-gradient(to right, #020f08bf, #020f08bf),
     url('/images/services-2@x1.jpg');
 }
 
 .service-3 {
-  background-image: linear-gradient(to right, #020f0880, #020f0880),
+  background-image: linear-gradient(to right, #020f08bf, #020f08bf),
     url('/images/services-3@x1.jpg');
 }
 
 .service-4 {
-  background-image: linear-gradient(to right, #020f0880, #020f0880),
+  background-image: linear-gradient(to right, #020f08bf, #020f08bf),
     url('/images/services-4@x1.jpg');
 }
 
 .service-5 {
-  background-image: linear-gradient(to right, #020f0880, #020f0880),
+  background-image: linear-gradient(to right, #020f08bf, #020f08bf),
     url('/images/services-5@x1.jpg');
 }
 
@@ -55,23 +55,23 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .service-1 {
-    background-image: linear-gradient(to right, #020f0880, #020f0880),
+    background-image: linear-gradient(to right, #020f08bf, #020f08bf),
       url('/images/services-1@x2.jpg');
   }
   .service-2 {
-    background-image: linear-gradient(to right, #020f0880, #020f0880),
+    background-image: linear-gradient(to right, #020f08bf, #020f08bf),
       url('/images/services-2@x2.jpg');
   }
   .service-3 {
-    background-image: linear-gradient(to right, #020f0880, #020f0880),
+    background-image: linear-gradient(to right, #020f08bf, #020f08bf),
       url('/images/services-3@x2.jpg');
   }
   .service-4 {
-    background-image: linear-gradient(to right, #020f0880, #020f0880),
+    background-image: linear-gradient(to right, #020f08bf, #020f08bf),
       url('/images/services-4@x2.jpg');
   }
   .service-5 {
-    background-image: linear-gradient(to right, #020f0880, #020f0880),
+    background-image: linear-gradient(to right, #020f08bf, #020f08bf),
       url('/images/services-5@x2.jpg');
   }
 }

@@ -51,12 +51,16 @@ const CareerForm = () => {
               </li>
             ))}
           </ul>
-          <Textarea {...textarea} register={register} />
+          <div className="h-[196px] tablet:h-[260px] desktop:w-[292px] desktop:h-[305px]">
+            <Textarea {...textarea} register={register} />
+          </div>
         </div>
 
         <div className="max-tablet:mt-[18px] tablet:flex justify-between">
           <Checkbox {...checkbox} register={register} />
-          <SubmitBtn />
+          <div className="tablet:max-desktop:mt-[-14px] desktop:mt-[-18px]">
+            <SubmitBtn />
+          </div>
         </div>
       </form>
     </>
