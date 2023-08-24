@@ -6,7 +6,7 @@ import Field from '@/components/ui-forms/Field';
 import SubmitBtn from '@/components/ui-forms/SubmitBtn';
 import Textarea from '@/components/ui-forms/Textarea';
 
-import { getDefaultValues } from '@/utils/getdefaultValues';
+import { getDefaultValues } from '@/utils/getDefaultValues';
 import { checkbox, fields, textarea } from '@/data/career.data';
 import { career_schema } from '@/validation/schemas';
 import { yupResolver } from '@hookform/resolvers/yup';
