@@ -6,7 +6,12 @@ import logo from '@/public/icons/logo.svg';
 
 const Logo = () => {
   return (
-    <Link href={`#${hero}`} className={karantina.className}>
+    <Link
+      href={`#${hero}`}
+      className={`${karantina.className} p-[4px] transition-colors 
+              hover:bg-transparent-white-dark 
+              focus:bg-transparent-white-dark `}
+    >
       <Image
         className="h-auto"
         src={logo}

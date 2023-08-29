@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <header className="absolute left-[50%] translate-x-[-50%] z-[1200] w-full h-[146px]">
-      <div className="container flex justify-between items-center pt-[36px] tablet:pt-[24px]">
+      <div className="container flex justify-between items-center mt-[28px] tablet:mt-[16px]">
         <Logo />
         <NavBar />
         <button

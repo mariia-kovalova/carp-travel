@@ -25,7 +25,7 @@ const BtnLink: FC<IProps> = ({ text, href }) => {
       href={href}
       onClick={handleScroll}
       className="relative block px-[18px] py-[3px] w-[280px]
-               bg-transparent-white-light transition-transform
+               bg-transparent-white-light transition-colors
                hover:bg-transparent-white-light-accent 
                focus:bg-transparent-white-light-accent
                 tablet:py-[1px] tablet:w-full 
