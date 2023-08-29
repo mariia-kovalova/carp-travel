@@ -1,34 +1,16 @@
 'use client';
 
-import { gallery } from '@/constants/links';
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow } from 'swiper/modules';
 import { SwiperNavButtons } from './components/SwiperNavButtons';
+import { gallery } from '@/constants/links';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import '@/styles/swiper.css';
 import '@/styles/gallery.css';
-
-import img1 from '@/public/images/gallery-photo-1@x1.jpg';
-import img2 from '@/public/images/gallery-photo-2@x1.jpg';
-import img3 from '@/public/images/gallery-photo-3@x1.jpg';
-import Image from 'next/image';
-
-const images = [
-  { image: img1, alt: 'gallery 1' },
-  { image: img2, alt: 'gallery 2' },
-  { image: img3, alt: 'gallery 3' },
-  { image: img1, alt: 'gallery 1' },
-  { image: img2, alt: 'gallery 2' },
-  { image: img3, alt: 'gallery 3' },
-];
-
-const images_mobile = [
-  { image: img1, alt: 'gallery 1' },
-  { image: img2, alt: 'gallery 2' },
-  { image: img3, alt: 'gallery 3' },
-];
+import { images, images_mobile } from '@/data/gallery.data';
 
 const Gallery = () => {
   return (
