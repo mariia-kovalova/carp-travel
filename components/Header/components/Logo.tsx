@@ -15,7 +15,7 @@ const Logo = () => {
       <Image
         className="h-auto"
         src={logo}
-        alt="carp travel"
+        alt="carp travel logo"
         width="61"
         priority
       />
