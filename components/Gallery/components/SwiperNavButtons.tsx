@@ -7,8 +7,9 @@ export const SwiperNavButtons = () => {
 
   return (
     <div
-      className="swiper-nav-btns flex items-center justify-center gap-[300px] mt-[-23px]
-                  desktop:gap-[500px]"
+      className="swiper-nav-btns relative z-50 
+                flex items-center justify-center gap-[300px] mt-[-28px]
+                desktop:gap-[500px] desktop:mt-[-38px]"
     >
       <button
         className="text-[25px] font-thin uppercase desktop:text-[33px]"
