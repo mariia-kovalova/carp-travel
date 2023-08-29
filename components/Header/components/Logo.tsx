@@ -7,7 +7,13 @@ import logo from '@/public/icons/logo.svg';
 const Logo = () => {
   return (
     <Link href={`#${hero}`} className={karantina.className}>
-      <Image className="h-auto" src={logo} alt="carp travel" width="61" />
+      <Image
+        className="h-auto"
+        src={logo}
+        alt="carp travel"
+        width="61"
+        loading="eager"
+      />
       <p className="mt-[2px] text-[14px] leading-[14px] tracking-[.185em]">
         CarpTravel
       </p>
