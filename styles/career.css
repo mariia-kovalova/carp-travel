@@ -1,8 +1,12 @@
 .career {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   background-image: linear-gradient(to right, #020f08bf, #020f08bf),
     url('/images/career@x1.jpg');
+}
+
+.career.dublicate {
+  z-index: 1;
 }
 
 .career::before {

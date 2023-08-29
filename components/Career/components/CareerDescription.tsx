@@ -3,7 +3,7 @@ import CareerForm from './CareerForm';
 
 const CareerDescription = () => {
   return (
-    <div className="tablet:flex tablet:gap-[20px] desktop:gap-[24px]">
+    <div className=" relative tablet:flex tablet:gap-[20px] desktop:gap-[24px]">
       <div className="desktop:pl-[64px]">
         <p
           className="mb-[36px] font-extralight text-[30px] uppercase 
@@ -42,8 +42,8 @@ const CareerDescription = () => {
         </ul>
       </div>
       <div
-        className="max-tablet:hidden tablet:w-[calc(100%-204px)]
-                      max-desktop:pt-[98px] desktop:w-[calc(100%-562px)]"
+        className="max-tablet:absolute max-tablet:w-full max-tablet:pt-[111px]
+                  max-desktop:pt-[98px] desktop:w-[calc(100%-562px)]"
       >
         <CareerForm />
       </div>

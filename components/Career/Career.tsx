@@ -12,11 +12,7 @@ const Career = () => (
         <CareerDescription />
       </div>
     </div>
-    <div className="career background-image min-h-screen tablet:hidden">
-      <div className="container container-padding">
-        <CareerForm />
-      </div>
-    </div>
+    <div className="career dublicate background-image min-h-screen h-[826px] tablet:hidden"></div>
   </section>
 );
 
