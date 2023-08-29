@@ -12,7 +12,7 @@ const Logo = () => {
         src={logo}
         alt="carp travel"
         width="61"
-        loading="eager"
+        priority
       />
       <p className="mt-[2px] text-[14px] leading-[14px] tracking-[.185em]">
         CarpTravel
