@@ -11,8 +11,12 @@ const ContactDescription = () => {
             className="text-[14px] leading-[24px] flex flex-col
                     tablet:text-[16px] desktop:text-[18px]"
           >
-            <a href="tel:+380981234567">+38 (098) 12 34 567</a>
-            <a href="tel:+380731234567">+38 (073) 12 34 567</a>
+            <a className="contact-link" href="tel:+380981234567">
+              +38 (098) 12 34 567
+            </a>
+            <a className="contact-link" href="tel:+380731234567">
+              +38 (073) 12 34 567
+            </a>
           </div>
           <p className="w-[81px] text-[12px] font-extralight leading-[20px] desktop:leading-[24px]">
             Phone number
@@ -21,7 +25,7 @@ const ContactDescription = () => {
         <div className="flex gap-[20px] justify-end">
           <a
             href="mailto:support@carptravel.com"
-            className="text-[14px] leading-[24px] tablet:text-[16px] default:text-[18px]"
+            className="contact-link text-[14px] leading-[24px] tablet:text-[16px] default:text-[18px]"
           >
             support@carptravel.com
           </a>
@@ -38,16 +42,36 @@ const ContactDescription = () => {
           className="text-[14px] leading-[24px] flex flex-col w-[81px]
                     tablet:text-[16px] default:text-[18px]"
         >
-          <a href="" target="_blank" rel="noreferrer noopener nofollow">
+          <a
+            className="contact-link"
+            href=""
+            target="_blank"
+            rel="noreferrer noopener nofollow"
+          >
             facebook
           </a>
-          <a href="" target="_blank" rel="noreferrer noopener nofollow">
+          <a
+            className="contact-link"
+            href=""
+            target="_blank"
+            rel="noreferrer noopener nofollow"
+          >
             instagram
           </a>
-          <a href="" target="_blank" rel="noreferrer noopener nofollow">
+          <a
+            className="contact-link"
+            href=""
+            target="_blank"
+            rel="noreferrer noopener nofollow"
+          >
             youtube
           </a>
-          <a href="" target="_blank" rel="noreferrer noopener nofollow">
+          <a
+            className="contact-link"
+            href=""
+            target="_blank"
+            rel="noreferrer noopener nofollow"
+          >
             tiktok
           </a>
         </div>

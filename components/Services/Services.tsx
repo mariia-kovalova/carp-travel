@@ -22,15 +22,15 @@ const Services = () => {
     clickable: true,
     renderBullet: (index: number, className: string) => {
       return ReactDOMServer.renderToStaticMarkup(
-        <div
-          className={`${className}
-         text-[20px] font-extralight leading-[17px]
-         tablet:text-[22px] tablet:leading-[18px]
-         desktop:flex gap-[53px] desktop:text-[28px] desktop:leading-[24px]`}
-        >
-          <p className="uppercase transition-all w-[170px] tablet:w-[220px] desktop:w-[238px]">
+        <div className={className}>
+          <button
+            className="w-[170px] text-[20px] font-extralight leading-[17px] text-left uppercase opacity-50
+                      transition-all hover:opacity-100 hover:translate-x-[14px] focus:opacity-100 focus:translate-x-[14px]
+                      tablet:w-[220px] tablet:text-[22px] tablet:leading-[18px]
+                      desktop:w-[238px] desktop:text-[28px] desktop:leading-[24px]"
+          >
             {slides[index].alt}
-          </p>
+          </button>
           <p
             className="call transition-opacity max-desktop:hidden font-thin
                         text-[12px] leading-[24px] tracking-[2.4px]"

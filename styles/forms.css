@@ -9,6 +9,7 @@ input::placeholder {
 }
 
 .checkbox-indicator {
+  cursor: pointer;
   position: relative;
 }
 
@@ -23,10 +24,35 @@ input::placeholder {
   height: 14px;
 
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 150ms var(--cubic);
 }
 
 .career-checkbox:checked + .checkbox-indicator::before {
   background-color: #ffffff;
+}
+
+.checkbox-indicator::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 32px;
+  height: 32px;
+
+  background-color: transparent;
+
+  transition: background-color 150ms var(--cubic);
+}
+
+.career-checkbox:hover + .checkbox-indicator::after {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.career-checkbox:focus + .checkbox-indicator::after {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 @media screen and (min-width: 1280px) {
@@ -41,5 +67,10 @@ input::placeholder {
   .checkbox-indicator::before {
     width: 16px;
     height: 16px;
+  }
+
+  .checkbox-indicator::after {
+    width: 34px;
+    height: 34px;
   }
 }
