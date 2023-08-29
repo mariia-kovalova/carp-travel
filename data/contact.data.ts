@@ -1,13 +1,13 @@
 export const fields = [
   {
-    id: 'name_career',
+    id: 'name_contact',
     inputName: 'name',
     label: 'Full name',
     type: 'text',
     placeholder: 'John Smith',
   },
   {
-    id: 'email_career',
+    id: 'email_contact',
     inputName: 'email',
     label: 'E-mail',
     type: 'email',
@@ -16,7 +16,7 @@ export const fields = [
 ];
 
 export const textarea = {
-  id: 'career_textarea',
+  id: 'textarea_contact',
   inputName: 'message',
   label: 'Message',
 };

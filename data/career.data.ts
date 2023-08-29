@@ -52,13 +52,13 @@ export const fields = [
 ];
 
 export const textarea = {
-  id: 'career_textarea',
+  id: 'textarea_career',
   inputName: 'message',
   label: 'Message',
 };
 
 export const checkbox = {
-  id: 'career_checkbox',
+  id: 'checkbox_career',
   type: 'checkbox',
   inputName: 'consent',
   label: 'I confirm my consent to the processing of personal data.',

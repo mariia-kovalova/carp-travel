@@ -20,11 +20,13 @@ const Checkbox: FC<IProps> = ({ id, inputName, label, register }) => {
         {...register(inputName)}
         className="visually-hidden career-checkbox"
       />
-      <div
-        className="checkbox-indicator w-[22px] h-[22px] shrink-0 border-[1px] 
+      <span
+        className="checkbox-indicator block w-[22px] h-[22px] shrink-0 border-[1px] 
                   desktop:w-[24px] desktop:h-[24px]"
       />
-      <p className="text-[12px] font-extralight leading-[24px]">{label}</p>
+      <span className="text-[12px] font-extralight leading-[24px]">
+        {label}
+      </span>
     </label>
   );
 };
