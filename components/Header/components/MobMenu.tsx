@@ -1,6 +1,6 @@
-import { NavBarLinks } from '@/constants/links';
-import Link from 'next/link';
 import { FC } from 'react';
+import Link from 'next/link';
+import { NavBarLinks } from '@/constants/links';
 
 interface IProps {
   onMenuClose: () => void;
@@ -19,13 +19,10 @@ const MobMenu: FC<IProps> = ({ onMenuClose }) => {
   };
 
   return (
-    <div
-      className="tablet:hidden absolute top-0 left-0 h-[100vh] w-[100vw]
-               bg-dark-gray backdrop-blur-[25px]"
-    >
+    <div className="tablet:hidden absolute top-0 left-0 h-[100vh] w-[100vw] bg-dark-gray backdrop-blur-[25px]">
       <nav className="container relative h-full flex justify-center items-center">
         <button
-          className="absolute top-[38px] right-[20px] text-[14px] font-normal leading-normal tracking-[1.4px] uppercase"
+          className="absolute top-[44px] right-[18px] text-[14px] font-normal leading-normal tracking-[1.4px] uppercase"
           type="button"
           onClick={onMenuClose}
         >
