@@ -39,7 +39,7 @@ const Gallery = () => {
         </h2>
         <ul className="flex flex-col gap-[24px] tablet:hidden">
           {images_mobile.map(({ image, alt }) => (
-            <li key={image.src}>
+            <li key={`${image.src}-mobile`}>
               <Image src={image} alt={alt} />
             </li>
           ))}
@@ -59,8 +59,8 @@ const Gallery = () => {
             effect="coverflow"
             slidesPerView={3}
           >
-            {images.map(({ image, alt }) => (
-              <SwiperSlide key={image.src}>
+            {images.map(({ image, alt }, i) => (
+              <SwiperSlide key={`${image.src}-${i}`}>
                 <div className="w-fit mx-auto">
                   <Image src={image} alt={alt} width="606" />
                 </div>
