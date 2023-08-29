@@ -1,3 +1,5 @@
+import info from '@/data/career.data.json';
+
 const CareerCall = () => (
   <div
     className="section-description w-[179px] mb-[24px]
@@ -5,8 +7,8 @@ const CareerCall = () => (
                  tablet:w-[221px] desktop:mb-[14px] tablet:max-desktop:text-[13px]
                  desktop:w-[234px]"
   >
-    <p>Don&#39;t miss your opportunity!</p>
-    <p>Fill out the form right now and join our team!</p>
+    <p>{info.call.part1}</p>
+    <p>{info.call.part1}</p>
   </div>
 );
 

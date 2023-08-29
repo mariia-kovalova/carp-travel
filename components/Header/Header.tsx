@@ -3,8 +3,8 @@
 import { useState } from 'react';
 
 import Logo from './components/Logo';
-import MobMenu from './components/MobMenu';
 import NavBar from './components/NavBar';
+import MobMenu from './components/MobMenu';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);

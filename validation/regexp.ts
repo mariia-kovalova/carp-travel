@@ -6,4 +6,4 @@ const REG_EXPS = {
     /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/,
 };
 
-export const { nameRegExp, phoneRegExp } = REG_EXPS;
+export default REG_EXPS;

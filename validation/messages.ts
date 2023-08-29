@@ -8,4 +8,4 @@ const VALIDATION_MESSAGES = {
   emailMes: 'Invalid email',
 };
 
-export const { requiredMes, nameMes, phoneMes, emailMes } = VALIDATION_MESSAGES;
+export default VALIDATION_MESSAGES;

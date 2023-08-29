@@ -1,8 +1,11 @@
 import * as Yup from 'yup';
-import { emailMes, nameMes, phoneMes, requiredMes } from './messages';
-import { nameRegExp, phoneRegExp } from './regexp';
+import VALIDATION_MESSAGES from './messages';
+import REG_EXPS from './regexp';
 
-export const career_schema = Yup.object().shape({
+const { requiredMes, nameMes, emailMes, phoneMes } = VALIDATION_MESSAGES;
+const { nameRegExp, phoneRegExp } = REG_EXPS;
+
+const career_schema = Yup.object().shape({
   name: Yup.string()
     .required(requiredMes)
     .matches(nameRegExp, nameMes.format)
@@ -12,10 +15,17 @@ export const career_schema = Yup.object().shape({
   phone: Yup.string().required(requiredMes).matches(phoneRegExp, phoneMes),
 });
 
-export const contact_schema = Yup.object().shape({
+const contact_schema = Yup.object().shape({
   name: Yup.string()
     .required(requiredMes)
     .matches(nameRegExp, nameMes.format)
     .max(16, nameMes.size),
   email: Yup.string().required(requiredMes).email(emailMes),
 });
+
+const schemas = {
+  career_schema,
+  contact_schema,
+};
+
+export default schemas;

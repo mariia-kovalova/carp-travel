@@ -1,9 +1,11 @@
-import { career } from '@/data/career.data';
+import info from '@/data/career.data.json';
 import CareerForm from './CareerForm';
+
+const { description_2, sub_title } = info;
 
 const CareerDescription = () => {
   return (
-    <div className=" relative tablet:flex tablet:gap-[20px] desktop:gap-[24px]">
+    <div className="relative tablet:flex tablet:gap-[20px] desktop:gap-[24px]">
       <div className="desktop:pl-[64px]">
         <p
           className="mb-[36px] font-extralight text-[30px] uppercase 
@@ -11,14 +13,14 @@ const CareerDescription = () => {
                     tablet:ml-[88px] tablet:mb-[54px] 
                     desktop:mb-[45px] desktop:ml-[98px] desktop:text-[36px] desktop:leading-[39px]"
         >
-          why us?
+          {sub_title}
         </p>
         <ul
           className="w-[181px] flex flex-col gap-[16px]
                     tablet:gap-[24px] tablet:w-[221px]
                     desktop:w-fit"
         >
-          {career.map(({ title, description }) => (
+          {description_2.map(({ title, description }) => (
             <li
               key={title}
               className="flex flex-col gap-[8px]

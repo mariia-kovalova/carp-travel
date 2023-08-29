@@ -3,7 +3,7 @@ interface IFileds {
   type?: string;
 }
 
-export const getDefaultValues = (fileds: IFileds[]) =>
+const getDefaultValues = (fileds: IFileds[]) =>
   fileds.reduce(
     (acc, { inputName, type }) => ({
       ...acc,
@@ -11,3 +11,5 @@ export const getDefaultValues = (fileds: IFileds[]) =>
     }),
     {}
   );
+
+export default getDefaultValues;

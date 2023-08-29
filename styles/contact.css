@@ -32,6 +32,8 @@
 
 .contact-link {
   position: relative;
+  display: block;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -39,7 +41,7 @@
   content: '';
   position: absolute;
   bottom: 0;
-  transform: translateX(100%);
+  transform: translateX(101%);
 
   height: 1px;
   width: 100%;

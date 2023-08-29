@@ -1,13 +1,19 @@
 'use client';
 
-import Field from '@/components/ui-forms/Field';
-import SubmitBtn from '@/components/ui-forms/SubmitBtn';
-import Textarea from '@/components/ui-forms/Textarea';
-import { fields, textarea } from '@/data/contact.data';
-import { getDefaultValues } from '@/utils/getDefaultValues';
-import { contact_schema } from '@/validation/schemas';
+import { useForm, FieldValues } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { FieldValues, useForm } from 'react-hook-form';
+
+import Field from '@/components/ui-forms/Field';
+import Textarea from '@/components/ui-forms/Textarea';
+import SubmitBtn from '@/components/ui-forms/SubmitBtn';
+
+import getDefaultValues from '@/utils/getDefaultValues';
+import schemas from '@/validation/schemas';
+import info from '@/data/contact.data.json';
+
+import '@/styles/forms.css';
+
+const { fields, textarea } = info;
 
 const ContactForm = () => {
   const {
@@ -16,7 +22,7 @@ const ContactForm = () => {
     reset,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(contact_schema),
+    resolver: yupResolver(schemas.contact_schema),
     defaultValues: {
       ...getDefaultValues([...fields, textarea]),
     },

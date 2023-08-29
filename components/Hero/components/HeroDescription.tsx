@@ -1,4 +1,4 @@
-import { contact } from '@/constants/links';
+import LINKS from '@/constants/links';
 import BtnLink from './BtnLink';
 
 const HeroDescription = () => (
@@ -36,7 +36,7 @@ const HeroDescription = () => (
         service!
       </p>
 
-      <BtnLink text="join now" href={`#${contact}`} />
+      <BtnLink text="join now" href={`#${LINKS.contact}`} />
     </div>
   </div>
 );

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow } from 'swiper/modules';
 import { SwiperNavButtons } from './components/SwiperNavButtons';
-import { gallery } from '@/constants/links';
+import LINKS from '@/constants/links';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -14,7 +14,10 @@ import { images, images_mobile } from '@/data/gallery.data';
 
 const Gallery = () => {
   return (
-    <section className="gallery background-image min-h-screen" id={gallery}>
+    <section
+      id={LINKS.gallery}
+      className="gallery background-image min-h-screen"
+    >
       <div className="container container-padding">
         <h2 className="section-title mb-[24px] tablet:mb-[72px]">
           our <span className="font-medium">gallery</span>

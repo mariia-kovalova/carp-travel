@@ -2,7 +2,7 @@
 
 import * as ReactDOMServer from 'react-dom/server';
 import { useState } from 'react';
-import { services } from '@/constants/links';
+import LINKS from '@/constants/links';
 import { slides } from '@/data/slider.data';
 import { EffectFade, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -33,7 +33,7 @@ const Services = () => {
 
   return (
     <section
-      id={services}
+      id={LINKS.services}
       className={`services service-${bgVariant} background-image min-h-screen`}
     >
       <div className="container container-padding">

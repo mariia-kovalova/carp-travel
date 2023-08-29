@@ -1,12 +1,12 @@
-import '../styles/globals.css';
 import type { Metadata } from 'next';
-import { inter } from './fonts';
 import Header from '@/components/Header/Header';
+import fonts from './fonts';
+import info from '@/data/website.data.json';
+import '../styles/globals.css';
 
 export const metadata: Metadata = {
-  title: 'Carp Travel App',
-  description:
-    'We offer you unforgettable trips to the most beautiful parts of the Carpathians. Enjoy stunning views, exciting expeditions, and the best service!',
+  title: info.title,
+  description: info.description,
   icons: {
     icon: [
       {
@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} text-white bg-fall-back`}>
+      <body className={`${fonts.inter.className} text-white bg-fall-back`}>
         <Header />
         <main>{children}</main>
       </body>

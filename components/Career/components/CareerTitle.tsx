@@ -1,3 +1,7 @@
+import info from '@/data/career.data.json';
+
+const { title, description_1 } = info;
+
 const CareerTitle = () => {
   return (
     <div
@@ -6,15 +10,14 @@ const CareerTitle = () => {
                 desktop:mb-[32px]"
     >
       <h2 className="section-title">
-        choose <span className="font-medium">us</span>
+        {title.text} <span className="font-medium">{title.accent}</span>
       </h2>
       <div
         className="section-description w-[180px] max-tablet:self-end
                  tablet:w-[221px] tablet:text-justify tablet:max-desktop:text-[13px]
                  desktop:w-[293px]"
       >
-        Your chance to join our passionate team in Carpathian tourism. Seeking
-        talented professionals to share our common mission.
+        {description_1.text}
       </div>
     </div>
   );

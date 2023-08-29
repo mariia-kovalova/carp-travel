@@ -1,4 +1,4 @@
-import { NavBarLinks } from '@/constants/links';
+import NavBarLinks from '@/constants/navBarLinks';
 import Link from 'next/link';
 
 const NavBar = () => {
@@ -16,7 +16,7 @@ const NavBar = () => {
     <nav className="max-tablet:hidden">
       <ul
         className="flex font-normal text-[14px] leading-[17px] tracking-[ 0.1em]
-                  tablet:gap-[16px] desktop:gap-[48px] "
+                  tablet:gap-[16px] desktop:gap-[48px]"
       >
         {NavBarLinks.map(({ href, title }) => (
           <li
