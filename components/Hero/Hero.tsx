@@ -4,7 +4,7 @@ import HeroDescription from './components/HeroDescription';
 import '@/styles/hero.css';
 
 const Hero = () => (
-  <section className="hero background-image h-[100vh]" id={hero}>
+  <section className="hero background-image min-h-[100vh]" id={hero}>
     <div
       className="container relative pt-[182px] flex max-tablet:flex-col gap-[24px] 
                 tablet:pt-[125px] tablet:justify-between 

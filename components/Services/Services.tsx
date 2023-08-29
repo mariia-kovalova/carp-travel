@@ -6,6 +6,7 @@ import { services } from '@/constants/links';
 import { slides } from '@/data/slider.data';
 import { EffectFade, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import ServicesBullet from './components/ServicesBullet';
 import ServicesTitle from './components/ServicesTitle';
 import ServicesDescription from './components/ServicesDescription';
 
@@ -15,32 +16,20 @@ import 'swiper/css/effect-fade';
 import '@/styles/swiper.css';
 import '@/styles/services.css';
 
+const pagination = {
+  clickable: true,
+  renderBullet: (index: number, className: string) =>
+    ReactDOMServer.renderToStaticMarkup(
+      <ServicesBullet
+        className={className}
+        alt={slides[index].alt}
+        call={slides[index].call}
+      />
+    ),
+};
+
 const Services = () => {
   const [bgVariant, setBgVariant] = useState<number>(0);
-
-  const pagination = {
-    clickable: true,
-    renderBullet: (index: number, className: string) => {
-      return ReactDOMServer.renderToStaticMarkup(
-        <div className={className}>
-          <button
-            className="w-[170px] text-[20px] font-extralight leading-[17px] text-left uppercase opacity-50
-                      transition-all hover:opacity-100 hover:translate-x-[14px] focus:opacity-100 focus:translate-x-[14px]
-                      tablet:w-[220px] tablet:text-[22px] tablet:leading-[18px]
-                      desktop:w-[238px] desktop:text-[28px] desktop:leading-[24px]"
-          >
-            {slides[index].alt}
-          </button>
-          <p
-            className="call transition-opacity max-desktop:hidden font-thin
-                        text-[12px] leading-[24px] tracking-[2.4px]"
-          >
-            {slides[index].call}
-          </p>
-        </div>
-      );
-    },
-  };
 
   return (
     <section
