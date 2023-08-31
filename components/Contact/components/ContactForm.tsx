@@ -1,11 +1,10 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { useForm, FieldValues } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
+import useFormPersist from 'react-hook-form-persist';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import info from '@/data/contact.data.json';
-import storageAPI from '@/utils/localStorageAPI';
 import STORAGE_KEYS from '@/constants/localStorageKeys';
 import schemas from '@/validation/schemas';
 
@@ -14,36 +13,31 @@ import Textarea from '@/components/ui-forms/Textarea';
 import SubmitBtn from '@/components/ui-forms/SubmitBtn';
 
 import '@/styles/forms.css';
+import notify from '@/utils/notify';
 
 const { fields, textarea, button } = info;
 const { contact_form } = STORAGE_KEYS;
 
 const ContactForm = () => {
-  const [credentials, setCredentials] = useState<FieldValues>(
-    storageAPI.load(contact_form) || {}
-  );
-
   const {
-    control,
+    register,
     handleSubmit,
+    reset,
+    watch,
+    setValue,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schemas.contact_schema),
   });
 
-  useEffect(() => {
-    storageAPI.save(contact_form, credentials);
-  }, [credentials]);
-
-  const onInput = (newCredentials: FieldValues) => {
-    setCredentials(prevCredentials => ({
-      ...prevCredentials,
-      ...newCredentials,
-    }));
-  };
+  useFormPersist(contact_form, {
+    watch,
+    setValue,
+  });
 
   const onSubmit = () => {
-    storageAPI.remove(contact_form);
+    reset();
+    notify.onSuccess('Success');
   };
 
   return (
@@ -62,23 +56,12 @@ const ContactForm = () => {
               className="mb-[16px] desktop:mb-[24px] desktop:basis-[calc(((100%-28px)/2))]"
               key={field.id}
             >
-              <Field
-                {...field}
-                credentials={credentials}
-                control={control}
-                onInput={onInput}
-                errors={errors}
-              />
+              <Field {...field} register={register} errors={errors} />
             </li>
           ))}
         </ul>
         <div className="h-[196px] tablet:h-[221px] tablet:flex-grow desktop:h-[174px]">
-          <Textarea
-            {...textarea}
-            credentials={credentials}
-            control={control}
-            onInput={onInput}
-          />
+          <Textarea {...textarea} register={register} />
         </div>
       </div>
 

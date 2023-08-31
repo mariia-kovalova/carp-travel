@@ -1,6 +1,7 @@
 import info from '@/data/career.data.json';
 
 import CareerForm from './CareerForm';
+import CareerCall from './CareerCall';
 
 const { description_2, sub_title } = info;
 
@@ -47,6 +48,7 @@ const CareerDescription = () => (
       className="max-tablet:absolute max-tablet:w-full max-tablet:pt-[111px]
                   max-desktop:pt-[98px] desktop:w-[calc(100%-562px)]"
     >
+      <CareerCall />
       <CareerForm />
     </div>
   </div>

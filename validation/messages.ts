@@ -6,6 +6,7 @@ const VALIDATION_MESSAGES = {
   },
   phoneMes: 'Invalid phone',
   emailMes: 'Invalid email',
+  consentMes: 'Confirm your concent',
 };
 
 export default VALIDATION_MESSAGES;

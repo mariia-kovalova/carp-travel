@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Toaster } from 'react-hot-toast';
 
 import info from '@/data/website.data.json';
 
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body className={`${fonts.inter.className} text-white bg-fall-back`}>
         <Header />
         <main>{children}</main>
+        <Toaster position="top-right" toastOptions={{ duration: 2000 }} />
       </body>
     </html>
   );
