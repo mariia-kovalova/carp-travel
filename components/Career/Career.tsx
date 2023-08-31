@@ -1,6 +1,8 @@
 import LINKS from '@/constants/links';
+
 import CareerTitle from './components/CareerTitle';
 import CareerDescription from './components/CareerDescription';
+
 import '@/styles/career.css';
 
 const Career = () => (

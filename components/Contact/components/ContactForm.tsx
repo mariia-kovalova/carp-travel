@@ -3,13 +3,13 @@
 import { useForm, FieldValues } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
-import Field from '@/components/ui-forms/Field';
-import Textarea from '@/components/ui-forms/Textarea';
-import SubmitBtn from '@/components/ui-forms/SubmitBtn';
-
 import getDefaultValues from '@/utils/getDefaultValues';
 import schemas from '@/validation/schemas';
 import info from '@/data/contact.data.json';
+
+import Field from '@/components/ui-forms/Field';
+import Textarea from '@/components/ui-forms/Textarea';
+import SubmitBtn from '@/components/ui-forms/SubmitBtn';
 
 import '@/styles/forms.css';
 

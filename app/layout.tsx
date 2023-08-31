@@ -1,7 +1,10 @@
 import type { Metadata } from 'next';
-import Header from '@/components/Header/Header';
-import fonts from './fonts';
+
 import info from '@/data/website.data.json';
+
+import Header from '@/components/Header/Header';
+
+import fonts from './fonts';
 import '../styles/globals.css';
 
 export const metadata: Metadata = {

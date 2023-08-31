@@ -1,4 +1,5 @@
 import info from '@/data/contact.data.json';
+
 import ContactSocial from './ContactSocial';
 
 const ContactSocialsList = () => (

@@ -1,7 +1,8 @@
 'use client';
 
-import info from '@/data/gallery.data';
 import { useSwiper } from 'swiper/react';
+
+import info from '@/data/gallery.data';
 
 const { buttons } = info;
 

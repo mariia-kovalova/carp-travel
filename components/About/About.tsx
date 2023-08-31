@@ -1,6 +1,8 @@
 import LINKS from '@/constants/links';
+
 import AboutDescription from './components/AboutDescription';
 import AboutTitle from './components/AboutTitle';
+
 import '@/styles/about.css';
 
 const About = () => (

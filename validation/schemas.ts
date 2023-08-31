@@ -1,4 +1,5 @@
 import * as Yup from 'yup';
+
 import VALIDATION_MESSAGES from './messages';
 import REG_EXPS from './regexp';
 

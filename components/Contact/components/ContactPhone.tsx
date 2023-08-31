@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import normalizeNumber from '@/utils/normalizeNumber';
 
 interface IProps {

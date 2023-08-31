@@ -1,13 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import fonts from '@/app/fonts';
-
 import LINKS from '@/constants/links';
+import info from '@/data/website.data.json';
 
 import logo from '@/public/icons/logo.svg';
 
-import info from '@/data/website.data.json';
+import fonts from '@/app/fonts';
 
 const Logo = () => (
   <Link

@@ -3,16 +3,15 @@
 import { useForm, FieldValues } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
-import CareerCall from './CareerCall';
+import info from '@/data/career.data.json';
+import getDefaultValues from '@/utils/getDefaultValues';
+import schemas from '@/validation/schemas';
+
 import Field from '@/components/ui-forms/Field';
 import Textarea from '@/components/ui-forms/Textarea';
 import Checkbox from '@/components/ui-forms/Checkbox';
 import SubmitBtn from '@/components/ui-forms/SubmitBtn';
-
-import getDefaultValues from '@/utils/getDefaultValues';
-import schemas from '@/validation/schemas';
-
-import info from '@/data/career.data.json';
+import CareerCall from './CareerCall';
 
 import '@/styles/forms.css';
 

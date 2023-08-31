@@ -1,4 +1,5 @@
 import info from '@/data/contact.data.json';
+
 import ContactEmail from './ContactEmail';
 
 const ContactEmailList = () => {

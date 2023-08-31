@@ -1,6 +1,9 @@
 import { FC } from 'react';
-import { desktop, min, tablet } from '@/constants/screens';
 import Image from 'next/image';
+
+import SCREENS from '@/constants/screens';
+
+const { desktop, min, tablet } = SCREENS;
 
 interface IProps {
   number: number;

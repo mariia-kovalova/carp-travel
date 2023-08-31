@@ -1,8 +1,9 @@
 'use client';
 
 import { FC } from 'react';
-import { ErrorMessage } from '@hookform/error-message';
 import { FieldErrors, FieldValues } from 'react-hook-form';
+import { ErrorMessage } from '@hookform/error-message';
+
 import Cross from './Cross';
 
 interface IProps {
@@ -30,7 +31,7 @@ const Field: FC<IProps> = ({
     <div className="relative flex flex-col gap-[4px] desktop:gap-[6px]">
       <label
         className={`text-[12px] font-extralight leading-[24px] tracking-[2.4px]
-        ${isError ? 'text-error' : ''} `}
+        ${isError ? 'text-error' : ''}`}
         htmlFor={id}
       >
         {label}
@@ -50,7 +51,7 @@ const Field: FC<IProps> = ({
           type={type}
           placeholder={placeholder}
           {...register(inputName)}
-          className={` w-full px-[8px] bg-transparent-white-dark 
+          className={`w-full px-[8px] bg-transparent-white-dark 
           ${type === 'tel' ? 'tel' : ''} 
           ${isError ? 'text-error' : ''}
             text-[13px] font-extralight leading-[24px]

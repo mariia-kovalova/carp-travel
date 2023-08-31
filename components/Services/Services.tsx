@@ -2,17 +2,15 @@
 
 import * as ReactDOMServer from 'react-dom/server';
 import { useState } from 'react';
-
-import LINKS from '@/constants/links';
-
 import { EffectFade, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
+import LINKS from '@/constants/links';
+import info from '@/data/services.data.json';
 
 import ServicesBullet from './components/ServicesBullet';
 import ServicesTitle from './components/ServicesTitle';
 import ServicesDescription from './components/ServicesDescription';
-
-import info from '@/data/services.data.json';
 
 import 'swiper/css';
 import 'swiper/css/pagination';

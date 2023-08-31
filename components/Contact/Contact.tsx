@@ -1,8 +1,9 @@
 import LINKS from '@/constants/links';
+import info from '@/data/contact.data.json';
+
 import ContactDescription from './components/ContactDescription';
 import ContactForm from './components/ContactForm';
 
-import info from '@/data/contact.data.json';
 import '@/styles/contact.css';
 
 const Contact = () => (

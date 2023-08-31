@@ -1,5 +1,6 @@
-import NavBarLinks from '@/constants/navBarLinks';
 import Link from 'next/link';
+
+import NavBarLinks from '@/constants/navBarLinks';
 
 const NavBar = () => {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {

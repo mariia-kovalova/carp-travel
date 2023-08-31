@@ -1,8 +1,7 @@
 import LINKS from '@/constants/links';
+import info from '@/data/hero.data.json';
 
 import BtnLink from './BtnLink';
-
-import info from '@/data/hero.data.json';
 
 const { description_p2, description_p3, button } = info;
 

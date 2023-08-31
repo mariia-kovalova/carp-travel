@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import Link from 'next/link';
+
 import NavBarLinks from '@/constants/navBarLinks';
 
 interface IProps {

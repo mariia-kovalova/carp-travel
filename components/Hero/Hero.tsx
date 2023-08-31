@@ -1,4 +1,5 @@
 import LINKS from '@/constants/links';
+
 import HeroTitle from './components/HeroTitle';
 import HeroDescription from './components/HeroDescription';
 
