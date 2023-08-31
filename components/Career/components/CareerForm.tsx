@@ -5,6 +5,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 import info from '@/data/career.data.json';
 import getDefaultValues from '@/utils/getDefaultValues';
+import storageAPI from '@/utils/localStorageAPI';
+import STORAGE_KEYS from '@/constants/localStorageKeys';
 import schemas from '@/validation/schemas';
 
 import Field from '@/components/ui-forms/Field';
@@ -16,6 +18,7 @@ import CareerCall from './CareerCall';
 import '@/styles/forms.css';
 
 const { fields, checkbox, textarea, button } = info;
+const { career_form } = STORAGE_KEYS;
 
 const CareerForm = () => {
   const {
@@ -26,12 +29,12 @@ const CareerForm = () => {
   } = useForm({
     resolver: yupResolver(schemas.career_schema),
     defaultValues: {
-      ...getDefaultValues([...fields, textarea, checkbox]),
+      ...getDefaultValues(career_form, [...fields, textarea, checkbox]),
     },
   });
 
   const onSubmit = (values: FieldValues) => {
-    console.log(values);
+    storageAPI.save(career_form, values);
     if (!values.consent) {
       return alert('please give your consent');
     }

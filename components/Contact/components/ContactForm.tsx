@@ -4,6 +4,8 @@ import { useForm, FieldValues } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import getDefaultValues from '@/utils/getDefaultValues';
+import storageAPI from '@/utils/localStorageAPI';
+import STORAGE_KEYS from '@/constants/localStorageKeys';
 import schemas from '@/validation/schemas';
 import info from '@/data/contact.data.json';
 
@@ -14,6 +16,7 @@ import SubmitBtn from '@/components/ui-forms/SubmitBtn';
 import '@/styles/forms.css';
 
 const { fields, textarea, button } = info;
+const { contact_form } = STORAGE_KEYS;
 
 const ContactForm = () => {
   const {
@@ -24,12 +27,13 @@ const ContactForm = () => {
   } = useForm({
     resolver: yupResolver(schemas.contact_schema),
     defaultValues: {
-      ...getDefaultValues([...fields, textarea]),
+      ...getDefaultValues(contact_form, [...fields, textarea]),
     },
   });
 
   const onSubmit = (values: FieldValues) => {
-    console.log(values);
+    storageAPI.save(contact_form, values);
+
     reset();
   };
 
