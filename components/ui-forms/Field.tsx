@@ -2,9 +2,10 @@
 
 import { FC } from 'react';
 import { Controller, FieldErrors, FieldValues } from 'react-hook-form';
-import { ErrorMessage } from '@hookform/error-message';
 
-import Cross from './Cross';
+import Label from './Label';
+import Helper from './Helper';
+import PhoneHelper from './PhoneHelper';
 
 interface IProps {
   id: string;
@@ -33,23 +34,15 @@ const Field: FC<IProps> = ({
 
   return (
     <div className="relative flex flex-col gap-[4px] desktop:gap-[6px]">
-      <label
-        className={`text-[12px] font-extralight leading-[24px] tracking-[2.4px]
-        ${isError ? 'text-error' : ''}`}
-        htmlFor={id}
-      >
-        {label}
-      </label>
+      <Label
+        id={id}
+        label={label}
+        className={`${isError ? 'text-error' : ''}`}
+      />
 
       <div>
-        {type === 'tel' && (
-          <p
-            className="absolute left-[8px] top-[29px] text-[13px] font-extralight leading-[24px] 
-                      desktop:top-[31px] desktop:text-[20px]"
-          >
-            + 38
-          </p>
-        )}
+        {type === 'tel' ? <PhoneHelper /> : null}
+
         <Controller
           control={control}
           name={inputName}
@@ -74,17 +67,7 @@ const Field: FC<IProps> = ({
         />
       </div>
 
-      {isError && (
-        <p
-          className="absolute bottom-[-23px] right-0
-                  flex gap-[5px] items-center
-                  text-[12px] font-extralight leading-[24px]
-                  tracking-[2.4px] text-error"
-        >
-          <Cross />
-          <ErrorMessage errors={errors} name={inputName} />
-        </p>
-      )}
+      {isError ? <Helper inputName={inputName} errors={errors} /> : null}
     </div>
   );
 };

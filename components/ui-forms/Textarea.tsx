@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Controller, FieldValues } from 'react-hook-form';
+import Label from './Label';
 
 interface IProps {
   id: string;
@@ -23,12 +24,7 @@ const Textarea: FC<IProps> = ({
                 tablet:flex-grow
                 desktop:gap-[6px]"
   >
-    <label
-      htmlFor={id}
-      className="text-[12px] font-extralight leading-[24px] tracking-[2.4px]"
-    >
-      {label}
-    </label>
+    <Label id={id} label={label} />
     <Controller
       control={control}
       name={inputName}
