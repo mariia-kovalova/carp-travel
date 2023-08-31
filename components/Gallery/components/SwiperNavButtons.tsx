@@ -1,6 +1,9 @@
 'use client';
 
+import info from '@/data/gallery.data';
 import { useSwiper } from 'swiper/react';
+
+const { buttons } = info;
 
 export const SwiperNavButtons = () => {
   const swiper = useSwiper();
@@ -18,7 +21,7 @@ export const SwiperNavButtons = () => {
                   desktop:text-[33px]"
         onClick={() => swiper.slidePrev()}
       >
-        back
+        {buttons.back}
       </button>
       <button
         className="text-[25px] font-thin uppercase p-[4px] transition-colors
@@ -27,7 +30,7 @@ export const SwiperNavButtons = () => {
                   desktop:text-[33px]"
         onClick={() => swiper.slideNext()}
       >
-        next
+        {buttons.next}
       </button>
     </div>
   );

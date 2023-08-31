@@ -13,7 +13,7 @@ import info from '@/data/contact.data.json';
 
 import '@/styles/forms.css';
 
-const { fields, textarea } = info;
+const { fields, textarea, button } = info;
 
 const ContactForm = () => {
   const {
@@ -59,7 +59,7 @@ const ContactForm = () => {
       </div>
 
       <div className="desktop:mt-[16px]">
-        <SubmitBtn />
+        <SubmitBtn text={button.text} />
       </div>
     </form>
   );

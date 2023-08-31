@@ -1,8 +1,9 @@
 'use client';
 
 import { FC } from 'react';
-import BtnFrame from './BtnFrame';
 import Link from 'next/link';
+
+import BtnFrame from './BtnFrame';
 
 interface IProps {
   text: string;

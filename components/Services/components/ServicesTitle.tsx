@@ -1,8 +1,12 @@
 import { FC } from 'react';
 
+import info from '@/data/services.data.json';
+
 interface IProps {
   number: number;
 }
+
+const { title } = info;
 
 const ServicesTitle: FC<IProps> = ({ number }) => {
   return (
@@ -12,7 +16,7 @@ const ServicesTitle: FC<IProps> = ({ number }) => {
                 desktop:mb-[20px]"
     >
       <h2 className="section-title">
-        we <span className="font-medium">offer</span>
+        {title.text} <span className="font-medium">{title.accent}</span>
       </h2>
       <p
         className="self-end text-[43px] font-thin 

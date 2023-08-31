@@ -10,7 +10,9 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import '@/styles/swiper.css';
 import '@/styles/gallery.css';
-import { images, images_mobile } from '@/data/gallery.data';
+import info from '@/data/gallery.data';
+
+const { images, images_mobile } = info;
 
 const Gallery = () => {
   return (

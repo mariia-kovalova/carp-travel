@@ -1,0 +1,17 @@
+{
+  "title": {
+    "accent": "Uncover",
+    "text": "Carpathian’s Secrets"
+  },
+  "description_p1": {
+    "text": "Hoverla / Yaremche / Zakarpattia / Vorokhta / Synevyr Lake / Bukovel"
+  },
+  "description_p2": {
+    "text": { "p1": "days", "p2": " journey" },
+    "accent": "7"
+  },
+  "description_p3": {
+    "text": " We offer you unforgettable trips to the most beautiful parts of the Carpathians. Enjoy stunning views, exciting expeditions, and the best service!"
+  },
+  "button": { "text": "join now" }
+}

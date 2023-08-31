@@ -69,5 +69,8 @@
     "type": "checkbox",
     "inputName": "consent",
     "label": "I confirm my consent to the processing of personal data."
+  },
+  "button": {
+    "text": "send"
   }
 }

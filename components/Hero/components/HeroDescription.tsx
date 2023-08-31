@@ -1,5 +1,10 @@
 import LINKS from '@/constants/links';
+
 import BtnLink from './BtnLink';
+
+import info from '@/data/hero.data.json';
+
+const { description_p2, description_p3, button } = info;
 
 const HeroDescription = () => (
   <div
@@ -13,9 +18,9 @@ const HeroDescription = () => (
                     tablet:mb-[-20px] tablet:text-[67px]
                     desktop:mb-[-34px] desktop:text-[98px]"
       >
-        <span className="font-medium">7</span>
+        <span className="font-medium">{description_p2.accent}</span>
         <span className="tablet:tracking-[8.71px] desktop:tracking-normal">
-          days
+          {description_p2.text.p1}
         </span>
       </p>
       <p
@@ -23,20 +28,16 @@ const HeroDescription = () => (
                     tablet:text-[14px] tablet:tracking-[25.9px]
                     desktop:text-[16px] desktop:tracking-[36.48px]"
       >
-        journey
+        {description_p2.text.p2}
       </p>
     </div>
     <div
       className="flex flex-col gap-[24px] items-center 
                   tablet:gap-[28px]"
     >
-      <p className="section-description text-justify">
-        We offer you unforgettable trips to the most beautiful parts of the
-        Carpathians. Enjoy stunning views, exciting expeditions, and the best
-        service!
-      </p>
+      <p className="section-description text-justify">{description_p3.text}</p>
 
-      <BtnLink text="join now" href={`#${LINKS.contact}`} />
+      <BtnLink text={button.text} href={`#${LINKS.contact}`} />
     </div>
   </div>
 );

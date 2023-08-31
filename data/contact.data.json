@@ -40,5 +40,8 @@
     "id": "textarea_contact",
     "inputName": "message",
     "label": "Message"
+  },
+  "button": {
+    "text": "send"
   }
 }

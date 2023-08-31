@@ -16,7 +16,7 @@ import info from '@/data/career.data.json';
 
 import '@/styles/forms.css';
 
-const { fields, checkbox, textarea } = info;
+const { fields, checkbox, textarea, button } = info;
 
 const CareerForm = () => {
   const {
@@ -63,7 +63,7 @@ const CareerForm = () => {
         <div className="max-tablet:mt-[18px] tablet:flex justify-between">
           <Checkbox {...checkbox} register={register} />
           <div className="tablet:max-desktop:mt-[-14px] desktop:mt-[-18px]">
-            <SubmitBtn />
+            <SubmitBtn text={button.text} />
           </div>
         </div>
       </form>
