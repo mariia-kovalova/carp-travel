@@ -1,10 +1,10 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { useForm, FieldValues } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import info from '@/data/career.data.json';
-import getDefaultValues from '@/utils/getDefaultValues';
 import storageAPI from '@/utils/localStorageAPI';
 import STORAGE_KEYS from '@/constants/localStorageKeys';
 import schemas from '@/validation/schemas';
@@ -21,24 +21,32 @@ const { fields, checkbox, textarea, button } = info;
 const { career_form } = STORAGE_KEYS;
 
 const CareerForm = () => {
+  const [credentials, setCredentials] = useState<FieldValues>(
+    storageAPI.load(career_form) || {}
+  );
+
   const {
-    register,
+    control,
     handleSubmit,
-    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schemas.career_schema),
-    defaultValues: {
-      ...getDefaultValues(career_form, [...fields, textarea, checkbox]),
-    },
   });
 
+  useEffect(() => {
+    storageAPI.save(career_form, credentials);
+  }, [credentials]);
+
+  const onInput = (newCredentials: FieldValues) => {
+    setCredentials(prevCredentials => ({
+      ...prevCredentials,
+      ...newCredentials,
+    }));
+  };
+
   const onSubmit = (values: FieldValues) => {
-    storageAPI.save(career_form, values);
-    if (!values.consent) {
-      return alert('please give your consent');
-    }
-    reset();
+    if (!values.consent) return alert('please give your consent');
+    storageAPI.remove(career_form);
   };
 
   return (
@@ -53,17 +61,34 @@ const CareerForm = () => {
           <ul>
             {fields.map(field => (
               <li className="mb-[16px] desktop:mb-[24px]" key={field.id}>
-                <Field {...field} register={register} errors={errors} />
+                <Field
+                  {...field}
+                  credentials={credentials}
+                  control={control}
+                  onInput={onInput}
+                  errors={errors}
+                />
               </li>
             ))}
           </ul>
           <div className="h-[196px] tablet:h-[260px] desktop:w-[292px] desktop:h-[305px]">
-            <Textarea {...textarea} register={register} />
+            <Textarea
+              {...textarea}
+              credentials={credentials}
+              control={control}
+              onInput={onInput}
+            />
           </div>
         </div>
 
         <div className="max-tablet:mt-[18px] tablet:flex justify-between">
-          <Checkbox {...checkbox} register={register} />
+          <Checkbox
+            {...checkbox}
+            credentials={credentials}
+            control={control}
+            onInput={onInput}
+          />
+
           <div className="tablet:max-desktop:mt-[-14px] desktop:mt-[-18px]">
             <SubmitBtn text={button.text} />
           </div>
