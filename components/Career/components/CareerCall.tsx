@@ -8,7 +8,7 @@ const CareerCall = () => (
                  desktop:w-[234px]"
   >
     <p>{info.call.part1}</p>
-    <p>{info.call.part1}</p>
+    <p>{info.call.part2}</p>
   </div>
 );
 
