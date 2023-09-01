@@ -47,7 +47,7 @@ const Gallery = () => (
           {images.map(({ image, alt }, i) => (
             <SwiperSlide key={`${image.src}-${i}`}>
               <div className="w-fit mx-auto">
-                <Image src={image} alt={alt} width="606" />
+                <Image src={image} alt={alt} width="411" />
               </div>
             </SwiperSlide>
           ))}
