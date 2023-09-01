@@ -1,6 +1,5 @@
 'use client';
 
-import { FC } from 'react';
 import { FieldErrors, FieldValues } from 'react-hook-form';
 
 import Label from './Label';
@@ -17,7 +16,7 @@ interface IProps {
   errors: FieldErrors<FieldValues>;
 }
 
-const Field: FC<IProps> = ({
+const Field: React.FC<IProps> = ({
   id,
   inputName,
   label,

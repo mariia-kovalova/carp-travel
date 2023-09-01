@@ -1,9 +1,7 @@
-import { FC } from 'react';
-
 interface IProps {
   text: string;
 }
-const SubmitBtn: FC<IProps> = ({ text }) => (
+const SubmitBtn: React.FC<IProps> = ({ text }) => (
   <button
     type="submit"
     className="block ml-auto uppercase text-[30px] font-medium px-[4px] transition-colors

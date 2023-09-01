@@ -1,5 +1,3 @@
-import { FC } from 'react';
-
 import ServicesPicture from './ServicesPicture';
 
 interface IProps {
@@ -9,7 +7,7 @@ interface IProps {
   description: string;
 }
 
-const ServicesDescription: FC<IProps> = ({
+const ServicesDescription: React.FC<IProps> = ({
   number,
   alt,
   call,

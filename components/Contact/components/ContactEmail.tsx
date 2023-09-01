@@ -1,10 +1,8 @@
-import { FC } from 'react';
-
 interface IProps {
   email: string;
 }
 
-const ContactEmail: FC<IProps> = ({ email }) => (
+const ContactEmail: React.FC<IProps> = ({ email }) => (
   <a className="contact-link" href={`mailto:${email}`}>
     {email}
   </a>

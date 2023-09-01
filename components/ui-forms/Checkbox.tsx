@@ -1,5 +1,3 @@
-import { FC } from 'react';
-
 interface IProps {
   id: string;
   inputName: string;
@@ -7,7 +5,7 @@ interface IProps {
   register: any;
 }
 
-const Checkbox: FC<IProps> = ({ id, inputName, label, register }) => (
+const Checkbox: React.FC<IProps> = ({ id, inputName, label, register }) => (
   <label
     htmlFor={id}
     className="self-start flex gap-[8px] items-start

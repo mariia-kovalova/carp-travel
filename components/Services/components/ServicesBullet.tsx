@@ -1,12 +1,10 @@
-import { FC } from 'react';
-
 interface IProps {
   className: string;
   alt: string;
   call: string;
 }
 
-const ServicesBullet: FC<IProps> = ({ className, alt, call }) => {
+const ServicesBullet: React.FC<IProps> = ({ className, alt, call }) => {
   return (
     <div className={className}>
       <button

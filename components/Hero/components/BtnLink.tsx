@@ -1,6 +1,5 @@
 'use client';
 
-import { FC } from 'react';
 import Link from 'next/link';
 
 import BtnFrame from './BtnFrame';
@@ -10,7 +9,7 @@ interface IProps {
   href: string;
 }
 
-const BtnLink: FC<IProps> = ({ text, href }) => {
+const BtnLink: React.FC<IProps> = ({ text, href }) => {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     const targetId = e.currentTarget.href.replace(/.*\#/, '');

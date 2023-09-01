@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import Label from './Label';
 
 interface IProps {
@@ -8,7 +7,7 @@ interface IProps {
   register: any;
 }
 
-const Textarea: FC<IProps> = ({ id, inputName, label, register }) => (
+const Textarea: React.FC<IProps> = ({ id, inputName, label, register }) => (
   <div
     className="w-full h-full flex flex-col gap-[4px] 
                 tablet:flex-grow

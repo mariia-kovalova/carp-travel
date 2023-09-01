@@ -1,5 +1,3 @@
-import { FC } from 'react';
-
 import info from '@/data/services.data.json';
 
 interface IProps {
@@ -8,7 +6,7 @@ interface IProps {
 
 const { title } = info;
 
-const ServicesTitle: FC<IProps> = ({ number }) => {
+const ServicesTitle: React.FC<IProps> = ({ number }) => {
   return (
     <div
       className="flex flex-col gap-[18px] mb-[11px]

@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import Image from 'next/image';
 
 import SCREENS from '@/constants/screens';
@@ -10,7 +9,7 @@ interface IProps {
   alt: string;
 }
 
-const ServicesPicture: FC<IProps> = ({ alt, number }) => {
+const ServicesPicture: React.FC<IProps> = ({ alt, number }) => {
   return (
     <picture>
       <source

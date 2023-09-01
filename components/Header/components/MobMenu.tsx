@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import Link from 'next/link';
 
 import NavBarLinks from '@/constants/navBarLinks';
@@ -7,7 +6,7 @@ interface IProps {
   onMenuClose: () => void;
 }
 
-const MobMenu: FC<IProps> = ({ onMenuClose }) => {
+const MobMenu: React.FC<IProps> = ({ onMenuClose }) => {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     const targetId = e.currentTarget.href.replace(/.*\#/, '');

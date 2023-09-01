@@ -45,6 +45,7 @@ export default function RootLayout({
       <body className={`${fonts.inter.className} text-white bg-fall-back`}>
         <Header />
         <main>{children}</main>
+        <div id="modal-root"></div>
         <Toaster position="top-right" toastOptions={{ duration: 2000 }} />
       </body>
     </html>
