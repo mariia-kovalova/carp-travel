@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: info.title,
     type: 'website',
     url: 'https://carp-travel-sigma.vercel.app/',
-    images: [{ url: 'icons/logo.svg' }],
+    images: [{ url: 'images/ogp/logo.png' }],
   },
 };
 
