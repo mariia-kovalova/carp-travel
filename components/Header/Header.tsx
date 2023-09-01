@@ -26,7 +26,7 @@ const Header = () => {
           menu
         </button>
 
-        {isOpen && <MobMenu onMenuClose={handleToggleMenu} />}
+        {isOpen ? <MobMenu onMenuClose={handleToggleMenu} /> : null}
       </div>
     </header>
   );

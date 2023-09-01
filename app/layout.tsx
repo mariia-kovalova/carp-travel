@@ -23,6 +23,14 @@ export const metadata: Metadata = {
       },
     ],
   },
+  openGraph: {
+    title: info.title,
+    description: info.description,
+    siteName: info.title,
+    type: 'website',
+    url: 'https://carp-travel-sigma.vercel.app/',
+    images: [{ url: 'icons/logo.svg' }],
+  },
 };
 
 export default function RootLayout({
