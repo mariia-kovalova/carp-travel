@@ -1,0 +1,3 @@
+.swiper-slide:not(.swiper-slide-next) {
+  opacity: 0.5;
+}

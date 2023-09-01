@@ -18,8 +18,8 @@ const images_mobile = [
 ];
 
 const buttons = {
-  back: 'back',
-  next: 'next',
+  back: { text: 'back', aria_label: 'Click to see the previous image' },
+  next: { text: 'next', aria_label: 'Click to see the next image' },
 };
 
 const info = {

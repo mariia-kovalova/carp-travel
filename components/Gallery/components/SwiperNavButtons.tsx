@@ -20,18 +20,20 @@ export const SwiperNavButtons = () => {
                  hover:bg-transparent-white-dark 
                  focus:bg-transparent-white-dark 
                   desktop:text-[33px]"
+        aria-label={buttons.back.aria_label}
         onClick={() => swiper.slidePrev()}
       >
-        {buttons.back}
+        {buttons.back.text}
       </button>
       <button
         className="text-[25px] font-thin uppercase p-[4px] transition-colors
                  hover:bg-transparent-white-dark 
                  focus:bg-transparent-white-dark 
                   desktop:text-[33px]"
+        aria-label={buttons.next.aria_label}
         onClick={() => swiper.slideNext()}
       >
-        {buttons.next}
+        {buttons.next.text}
       </button>
     </div>
   );

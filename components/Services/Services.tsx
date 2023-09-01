@@ -15,7 +15,7 @@ import ServicesDescription from './components/ServicesDescription';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
-import '@/styles/swiper.css';
+import '@/styles/swiper-pagination.css';
 import '@/styles/services.css';
 
 const { slides } = info;

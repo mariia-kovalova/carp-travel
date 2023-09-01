@@ -11,7 +11,7 @@ import { SwiperNavButtons } from './components/SwiperNavButtons';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
-import '@/styles/swiper.css';
+import '@/styles/swiper-navigation.css';
 import '@/styles/gallery.css';
 
 const { images, images_mobile } = info;
