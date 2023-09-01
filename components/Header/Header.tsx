@@ -2,19 +2,21 @@
 
 import { useState } from 'react';
 
-import Logo from './components/Logo';
+import Logo from '../shared/Logo';
 import NavBar from './components/NavBar';
 import MobMenu from './components/MobMenu';
+import Modal from '../shared/Modal';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggleMenu = () => {
     setIsOpen(prev => !prev);
+    document.body.classList.toggle('overflow-hidden');
   };
 
   return (
-    <header className="absolute left-[50%] translate-x-[-50%] z-[1200] w-full h-[146px]">
+    <header className="absolute left-[50%] translate-x-[-50%] z-[2] w-full h-[146px]">
       <div className="container flex justify-between items-center mt-[28px] tablet:mt-[16px]">
         <Logo />
         <NavBar />
@@ -26,7 +28,11 @@ const Header = () => {
           menu
         </button>
 
-        {isOpen ? <MobMenu onMenuClose={handleToggleMenu} /> : null}
+        {isOpen ? (
+          <Modal>
+            <MobMenu onMenuClose={handleToggleMenu} />
+          </Modal>
+        ) : null}
       </div>
     </header>
   );
