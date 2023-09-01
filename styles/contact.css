@@ -2,7 +2,7 @@
   position: relative;
   z-index: 1;
   background-image: linear-gradient(to right, #020f08bf, #020f08bf),
-    url('/images/contact@x1.jpg');
+    url('/images/contact/contact@x1.jpg');
 }
 
 .contact::before {
@@ -64,6 +64,6 @@
   (min-resolution: 2dppx) {
   .contact {
     background-image: linear-gradient(to right, #020f08bf, #020f08bf),
-      url('/images/contact@x2.jpg');
+      url('/images/contact/contact@x2.jpg');
   }
 }

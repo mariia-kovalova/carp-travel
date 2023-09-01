@@ -27,27 +27,27 @@
 
 .service-1 {
   background-image: linear-gradient(to right, #020f08bf, #020f08bf),
-    url('/images/services-1@x1.jpg');
+    url('/images/services/services-1@x1.jpg');
 }
 
 .service-2 {
   background-image: linear-gradient(to right, #020f08bf, #020f08bf),
-    url('/images/services-2@x1.jpg');
+    url('/images/services/services-2@x1.jpg');
 }
 
 .service-3 {
   background-image: linear-gradient(to right, #020f08bf, #020f08bf),
-    url('/images/services-3@x1.jpg');
+    url('/images/services/services-3@x1.jpg');
 }
 
 .service-4 {
   background-image: linear-gradient(to right, #020f08bf, #020f08bf),
-    url('/images/services-4@x1.jpg');
+    url('/images/services/services-4@x1.jpg');
 }
 
 .service-5 {
   background-image: linear-gradient(to right, #020f08bf, #020f08bf),
-    url('/images/services-5@x1.jpg');
+    url('/images/services/services-5@x1.jpg');
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -56,22 +56,22 @@
   (min-resolution: 2dppx) {
   .service-1 {
     background-image: linear-gradient(to right, #020f08bf, #020f08bf),
-      url('/images/services-1@x2.jpg');
+      url('/images/services/services-1@x2.jpg');
   }
   .service-2 {
     background-image: linear-gradient(to right, #020f08bf, #020f08bf),
-      url('/images/services-2@x2.jpg');
+      url('/images/services/services-2@x2.jpg');
   }
   .service-3 {
     background-image: linear-gradient(to right, #020f08bf, #020f08bf),
-      url('/images/services-3@x2.jpg');
+      url('/images/services/services-3@x2.jpg');
   }
   .service-4 {
     background-image: linear-gradient(to right, #020f08bf, #020f08bf),
-      url('/images/services-4@x2.jpg');
+      url('/images/services/services-4@x2.jpg');
   }
   .service-5 {
     background-image: linear-gradient(to right, #020f08bf, #020f08bf),
-      url('/images/services-5@x2.jpg');
+      url('/images/services/services-5@x2.jpg');
   }
 }

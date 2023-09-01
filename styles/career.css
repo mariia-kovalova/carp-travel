@@ -2,7 +2,7 @@
   position: relative;
   z-index: 2;
   background-image: linear-gradient(to right, #020f08bf, #020f08bf),
-    url('/images/career@x1.jpg');
+    url('/images/career/career@x1.jpg');
 }
 
 .career.dublicate {
@@ -37,7 +37,7 @@
 @media screen and (max-width: 768px) {
   .career {
     background-image: linear-gradient(to right, #020f08bf, #020f08bf),
-      url('/images/career-tablet@x1.jpg');
+      url('/images/career/career-tablet@x1.jpg');
   }
 }
 
@@ -47,7 +47,7 @@
   (min-resolution: 2dppx) {
   .career {
     background-image: linear-gradient(to right, #020f08bf, #020f08bf),
-      url('/images/career@x2.jpg');
+      url('/images/career/career@x2.jpg');
   }
 }
 
@@ -58,6 +58,6 @@
   (min-resolution: 2dppx) {
   .career {
     background-image: linear-gradient(to right, #020f08bf, #020f08bf),
-      url('/images/career-tablet@x2.jpg');
+      url('/images/career/career-tablet@x2.jpg');
   }
 }

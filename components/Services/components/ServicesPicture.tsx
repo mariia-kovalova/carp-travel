@@ -14,22 +14,22 @@ const ServicesPicture: FC<IProps> = ({ alt, number }) => {
   return (
     <picture>
       <source
-        srcSet={`/images/services-photo-${number}@x1.jpg 1x, /images/services-photo-${number}@x2.jpg 2x`}
+        srcSet={`/images/services/services-photo-${number}@x1.jpg 1x, /images/services/services-photo-${number}@x2.jpg 2x`}
         media={`(min-width: ${desktop})`}
         type="image/jpeg"
       />
       <source
-        srcSet={`/images/services-photo-${number}-tablet@x1.jpg 1x, /images/services-photo-${number}-tablet@x2.jpg 2x`}
+        srcSet={`/images/services/services-photo-${number}-tablet@x1.jpg 1x, /images/services/services-photo-${number}-tablet@x2.jpg 2x`}
         media={`(min-width: ${tablet})`}
         type="image/jpeg"
       />
       <source
-        srcSet={`/images/services-photo-${number}-mobile@x1.jpg 1x, /images/services-photo-${number}-mobile@x2.jpg 2x`}
+        srcSet={`/images/services/services-photo-${number}-mobile@x1.jpg 1x, /images/services/services-photo-${number}-mobile@x2.jpg 2x`}
         media={`(min-width: ${min})`}
         type="image/jpeg"
       />
       <Image
-        src={`/images/services-photo-${number}@x1.jpg`}
+        src={`/images/services/services-photo-${number}@x1.jpg`}
         alt={alt}
         width="607"
         height="429"

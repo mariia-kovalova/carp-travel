@@ -2,7 +2,7 @@
   position: relative;
   z-index: 1;
   background-image: linear-gradient(to right, #020f0880, #020f0880),
-    url('/images/about@x1.jpg');
+    url('/images/about/about@x1.jpg');
 }
 
 .about::before {
@@ -54,6 +54,6 @@
   (min-resolution: 2dppx) {
   .about {
     background-image: linear-gradient(to right, #020f0880, #020f0880),
-      url('/images/about@x2.jpg');
+      url('/images/about/about@x2.jpg');
   }
 }
