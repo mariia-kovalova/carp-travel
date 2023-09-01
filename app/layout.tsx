@@ -8,6 +8,8 @@ import Header from '@/components/Header/Header';
 import fonts from './fonts';
 import '../styles/globals.css';
 
+const { BASE_URL } = process.env;
+
 export const metadata: Metadata = {
   title: info.title,
   description: info.description,
@@ -28,7 +30,7 @@ export const metadata: Metadata = {
     description: info.description,
     siteName: info.title,
     type: 'website',
-    url: 'https://carp-travel-sigma.vercel.app/',
+    url: BASE_URL,
     images: [{ url: 'images/ogp/logo.png' }, { url: 'images/ogp/logo.jpg' }],
   },
 };
