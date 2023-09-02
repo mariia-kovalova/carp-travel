@@ -8,9 +8,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import LINKS from '@/constants/links';
 import info from '@/data/services.data.json';
 
-import ServicesBullet from './components/ServicesBullet';
-import ServicesTitle from './components/ServicesTitle';
-import ServicesDescription from './components/ServicesDescription';
+import ServicesBullet from '@/components/services/ServicesBullet';
+import ServicesDescription from '@/components/services/ServicesDescription';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -52,7 +51,6 @@ const Services = () => {
         >
           {slides.map(({ number, alt, call, description }) => (
             <SwiperSlide key={number}>
-              <ServicesTitle number={number} />
               <ServicesDescription
                 number={number}
                 alt={alt}

@@ -3,7 +3,7 @@ import { Toaster } from 'react-hot-toast';
 
 import info from '@/data/website.data.json';
 
-import Header from '@/components/Header/Header';
+import Header from '@/components/shared/Header';
 
 import fonts from './fonts';
 import '../styles/globals.css';

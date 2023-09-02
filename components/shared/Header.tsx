@@ -2,10 +2,10 @@
 
 import { useState } from 'react';
 
-import Logo from '../shared/Logo';
-import NavBar from './components/NavBar';
-import MobMenu from './components/MobMenu';
-import Modal from '../shared/Modal';
+import Logo from './Logo';
+import NavBar from './NavBar';
+import MobMenu from './MobMenu';
+import Modal from './Modal';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);

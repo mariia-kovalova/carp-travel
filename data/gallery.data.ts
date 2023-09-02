@@ -17,12 +17,18 @@ const images_mobile = [
   { image: img3, alt: 'mountains' },
 ];
 
+const title = {
+  text: 'our',
+  accent: 'gallery',
+};
+
 const buttons = {
   back: { text: 'back', aria_label: 'Click to see the previous image' },
   next: { text: 'next', aria_label: 'Click to see the next image' },
 };
 
 const info = {
+  title,
   images,
   images_mobile,
   buttons,

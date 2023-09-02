@@ -27,9 +27,7 @@ const NavBar = () => {
             <Link
               href={href}
               onClick={handleScroll}
-              className="p-[4px] transition-colors
-                        hover:bg-transparent-white-dark 
-                        focus:bg-transparent-white-dark"
+              className="p-[4px] transition-colors hover:bg-transparent-white-dark focus:bg-transparent-white-dark"
             >
               {title}
             </Link>
