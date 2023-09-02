@@ -10,10 +10,10 @@ import notify from '@/utils/notify';
 import STORAGE_KEYS from '@/constants/localStorageKeys';
 import VALIDATION_MESSAGES from '@/validation/messages';
 
-import Field from '@/components/ui-forms/Field';
-import Textarea from '@/components/ui-forms/Textarea';
-import Checkbox from '@/components/ui-forms/Checkbox';
-import SubmitBtn from '@/components/ui-forms/SubmitBtn';
+import Field from '@/components/forms/Field';
+import Textarea from '@/components/forms/Textarea';
+import Checkbox from '@/components/forms/Checkbox';
+import SubmitBtn from '@/components/forms/SubmitBtn';
 
 import '@/styles/forms.css';
 

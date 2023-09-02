@@ -7,13 +7,13 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import info from '@/data/contact.data.json';
 import STORAGE_KEYS from '@/constants/localStorageKeys';
 import schemas from '@/validation/schemas';
+import notify from '@/utils/notify';
 
-import Field from '@/components/ui-forms/Field';
-import Textarea from '@/components/ui-forms/Textarea';
-import SubmitBtn from '@/components/ui-forms/SubmitBtn';
+import Field from '@/components/forms/Field';
+import Textarea from '@/components/forms/Textarea';
+import SubmitBtn from '@/components/forms/SubmitBtn';
 
 import '@/styles/forms.css';
-import notify from '@/utils/notify';
 
 const { fields, textarea, button } = info;
 const { contact_form } = STORAGE_KEYS;

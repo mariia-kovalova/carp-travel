@@ -32,7 +32,7 @@ const Field: React.FC<IProps> = ({
       <Label
         id={id}
         label={label}
-        className={`${isError ? 'text-error' : ''}`}
+        extraClass={`${isError ? 'text-error' : ''}`}
       />
 
       <div>
