@@ -7,8 +7,7 @@ const CareerCall = () => (
                  tablet:w-[221px] desktop:mb-[14px] tablet:max-desktop:text-[13px]
                  desktop:w-[234px]"
   >
-    <p>{info.call.part1}</p>
-    <p>{info.call.part2}</p>
+    <p>{info.description_3.text}</p>
   </div>
 );
 
