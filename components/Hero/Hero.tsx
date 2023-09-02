@@ -10,7 +10,7 @@ const Hero = () => (
     <div
       className="container relative pt-[182px] flex max-tablet:flex-col gap-[24px] 
                 tablet:pt-[125px] tablet:justify-between 
-                desktop:pt-[141px]"
+                desktop:pt-[141px] desktop:gap-[298px]"
     >
       <HeroTitle />
       <HeroDescription />

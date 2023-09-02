@@ -3,7 +3,7 @@ import info from '@/data/hero.data.json';
 const { title, description_p1 } = info;
 
 const HeroTitle = () => (
-  <div className="flex flex-col gap-[24px] tablet:gap-[68px] tablet:basis-[426px]">
+  <div className="flex flex-col gap-[24px] tablet:gap-[68px] tablet:basis-[426px] desktop:basis-[646px]">
     <h1 className="section-title">
       <span className="font-medium">{title.accent}</span> {title.text}
     </h1>

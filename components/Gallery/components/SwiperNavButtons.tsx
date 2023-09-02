@@ -16,20 +16,14 @@ export const SwiperNavButtons = () => {
                 desktop:gap-[500px] desktop:mt-[-38px]"
     >
       <button
-        className="text-[25px] font-thin uppercase p-[4px] transition-colors
-                 hover:bg-transparent-white-dark 
-                 focus:bg-transparent-white-dark 
-                  desktop:text-[33px]"
+        className="base-btn text-[25px] font-thin desktop:text-[33px]"
         aria-label={buttons.back.aria_label}
         onClick={() => swiper.slidePrev()}
       >
         {buttons.back.text}
       </button>
       <button
-        className="text-[25px] font-thin uppercase p-[4px] transition-colors
-                 hover:bg-transparent-white-dark 
-                 focus:bg-transparent-white-dark 
-                  desktop:text-[33px]"
+        className="base-btn text-[25px] font-thin desktop:text-[33px]"
         aria-label={buttons.next.aria_label}
         onClick={() => swiper.slideNext()}
       >

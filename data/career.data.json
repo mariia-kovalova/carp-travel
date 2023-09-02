@@ -7,10 +7,6 @@
   "description_1": {
     "text": "Your chance to join our passionate team in Carpathian tourism. Seeking talented professionals to share our common mission."
   },
-  "call": {
-    "part1": "Don't miss your opportunity!",
-    "part2": "Fill out the form right now and join our team!"
-  },
   "description_2": [
     {
       "title": "Professional development",
@@ -29,6 +25,9 @@
       "description": "Unleash your potential through unforgettable projects showcasing Carpathian beauty"
     }
   ],
+  "description_3": {
+    "text": "Don't miss your opportunity! Fill out the form right now and join our team!"
+  },
   "fields": [
     {
       "id": "name_career",
