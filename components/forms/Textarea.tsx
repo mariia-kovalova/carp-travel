@@ -9,13 +9,13 @@ interface IProps {
 
 const Textarea: React.FC<IProps> = ({ id, inputName, label, register }) => (
   <div
-    className="w-full h-full flex flex-col gap-[4px] 
-                tablet:flex-grow
-                desktop:gap-[6px]"
+    className="x;l:gap-[6px] md:flex-grow flex h-full w-full 
+                flex-col
+                gap-[4px]"
   >
     <Label id={id} label={label} />
     <textarea
-      className="block h-full w-full p-[8px] bg-transparent-white-dark resize-none"
+      className="block h-full w-full resize-none bg-white/5 p-[8px]"
       id={id}
       {...register(inputName)}
     />

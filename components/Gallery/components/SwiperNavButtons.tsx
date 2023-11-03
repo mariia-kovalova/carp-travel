@@ -11,19 +11,19 @@ export const SwiperNavButtons = () => {
 
   return (
     <div
-      className="swiper-nav-btns relative z-50 
-                flex items-center justify-center gap-[300px] mt-[-28px]
-                desktop:gap-[500px] desktop:mt-[-38px]"
+      className="swiper-nav-btns xl:gap-[500px] xl:mt-[-38px] 
+                relative z-50 mt-[-28px] flex items-center
+                justify-center gap-[300px]"
     >
       <button
-        className="base-btn text-[25px] font-thin desktop:text-[33px]"
+        className="base-btn xl:text-[33px] text-[25px] font-thin"
         aria-label={buttons.back.aria_label}
         onClick={() => swiper.slidePrev()}
       >
         {buttons.back.text}
       </button>
       <button
-        className="base-btn text-[25px] font-thin desktop:text-[33px]"
+        className="base-btn xl:text-[33px] text-[25px] font-thin"
         aria-label={buttons.next.aria_label}
         onClick={() => swiper.slideNext()}
       >

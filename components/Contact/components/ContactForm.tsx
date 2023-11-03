@@ -47,25 +47,25 @@ const ContactForm = () => {
       autoComplete="off"
     >
       <div
-        className="mb-[6px] tablet:flex tablet:gap-[20px] 
-                      desktop:gap-[24px] desktop:flex-col"
+        className="xl:gap-[24px] xl:flex-col md:flex 
+                      md:gap-[20px] mb-[6px]"
       >
-        <ul className="tablet:w-[221px] desktop:w-[607px] desktop:flex desktop:gap-[28px]">
+        <ul className="xl:w-[607px] xl:flex xl:gap-[28px] md:w-[221px]">
           {fields.map(field => (
             <li
-              className="mb-[16px] desktop:mb-[24px] desktop:basis-[calc(((100%-28px)/2))]"
+              className="xl:mb-[24px] xl:basis-[calc(((100%-28px)/2))] mb-[16px]"
               key={field.id}
             >
               <Field {...field} register={register} errors={errors} />
             </li>
           ))}
         </ul>
-        <div className="h-[196px] tablet:h-[221px] tablet:flex-grow desktop:h-[174px]">
+        <div className="xl:h-[174px] md:h-[221px] md:flex-grow h-[196px]">
           <Textarea {...textarea} register={register} />
         </div>
       </div>
 
-      <div className="desktop:mt-[16px]">
+      <div className="xl:mt-[16px]">
         <SubmitBtn text={button.text} />
       </div>
     </form>

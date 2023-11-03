@@ -4,16 +4,16 @@ import ContactEmail from './ContactEmail';
 
 const ContactEmailList = () => {
   return (
-    <div className="flex flex-col gap-[24px] desktop:gap-[64px]">
-      <div className="flex gap-[20px] justify-end">
-        <ul className="flex flex-col text-[14px] leading-[24px] tablet:text-[16px] desktop:text-[18px]">
+    <div className="xl:gap-[64px] flex flex-col gap-[24px]">
+      <div className="flex justify-end gap-[20px]">
+        <ul className="md:text-[16px] xl:text-[18px] flex flex-col text-[14px] leading-[24px]">
           {info.email.items.map(email => (
             <li key={email} className="overflow-hidden">
               <ContactEmail email={email} />
             </li>
           ))}
         </ul>
-        <p className="w-[81px] text-[12px] font-extralight leading-[20px] desktop:leading-[24px]">
+        <p className="xl:leading-[24px] w-[81px] text-[12px] font-extralight leading-[20px]">
           {info.email.title}
         </p>
       </div>

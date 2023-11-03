@@ -9,20 +9,19 @@ const { title } = info;
 const ServicesTitle: React.FC<IProps> = ({ number }) => {
   return (
     <div
-      className="flex flex-col gap-[18px] mb-[11px]
-                tablet:flex-row tablet:gap-[170px] tablet:items-center tablet:mb-[36px]
-                desktop:mb-[20px]"
+      className="xl:mb-[20px] md:mb-[36px] md:flex-row md:items-center
+                md:gap-[170px] mb-[11px] flex flex-col
+                gap-[18px]"
     >
       <h2 className="section-title">
         {title.text} <span className="font-medium">{title.accent}</span>
       </h2>
       <p
-        className="self-end text-[43px] font-thin 
-                    tablet:self-auto tablet:text-[67px] tablet:leading-[78px]
-                    desktop:text-[98px] desktop:leading-5"
+        className="xl:text-[98px] xl:leading-5 md:self-auto 
+                    md:text-[67px] md:leading-[78px] self-end
+                    text-[43px] font-thin"
       >
-        0{number}/
-        <span className="text-transparent-white-light-accent">05</span>
+        0{number}/<span className="text-white/20">05</span>
       </p>
     </div>
   );

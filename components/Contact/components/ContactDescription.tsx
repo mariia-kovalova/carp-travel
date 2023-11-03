@@ -5,11 +5,11 @@ import ContactSocialsList from './ContactSocialsList';
 const ContactDescription = () => {
   return (
     <div
-      className="flex flex-col gap-[24px] 
-                tablet:max-desktop:flex-row tablet:max-desktop:gap-[90px] tablet:max-desktop:mb-[64px]
-                tablet:ml-[34px] desktop:ml-[107px] desktop:gap-[120px]"
+      className="mdOnly:flex-row mdOnly:gap-[90px] mdOnly:mb-[64px] 
+                md:ml-[34px] xl:ml-[107px] xl:gap-[120px]
+                flex flex-col gap-[24px]"
     >
-      <div className="flex flex-col gap-[24px] desktop:gap-[64px]">
+      <div className="xl:gap-[64px] flex flex-col gap-[24px]">
         <ContactPhoneList />
         <ContactEmailList />
       </div>

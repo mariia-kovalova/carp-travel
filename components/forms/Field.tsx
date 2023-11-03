@@ -28,7 +28,7 @@ const Field: React.FC<IProps> = ({
   const isError = errors[inputName];
 
   return (
-    <div className="relative flex flex-col gap-[4px] desktop:gap-[6px]">
+    <div className="xl:gap-[6px] relative flex flex-col gap-[4px]">
       <Label
         id={id}
         label={label}
@@ -38,11 +38,11 @@ const Field: React.FC<IProps> = ({
       <div>
         {type === 'tel' ? <PhoneHelper /> : null}
         <input
-          className={`w-full px-[8px] bg-transparent-white-dark 
+          className={`w-full bg-white/5 px-[8px] 
               ${type === 'tel' ? 'tel' : ''} 
               ${isError ? 'text-error' : ''}
-              text-[13px] font-extralight leading-[24px]
-              desktop:py-[2px] desktop:text-[20px]`}
+              xl:py-[2px] xl:text-[20px] text-[13px]
+              font-extralight leading-[24px]`}
           id={id}
           type={type}
           placeholder={placeholder}

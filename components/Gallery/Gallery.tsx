@@ -18,18 +18,18 @@ const { images, images_mobile } = info;
 
 const Gallery = () => (
   <section id={LINKS.gallery} className="gallery background-image min-h-screen">
-    <div className="container container-padding">
-      <h2 className="section-title mb-[24px] tablet:mb-[72px]">
+    <div className="container-padding container">
+      <h2 className="section-title md:mb-[72px] mb-[24px]">
         our <span className="font-medium">gallery</span>
       </h2>
-      <ul className="flex flex-col gap-[24px] tablet:hidden">
+      <ul className="md:hidden flex flex-col gap-[24px]">
         {images_mobile.map(({ image, alt }) => (
           <li key={`${image.src}-mobile`}>
             <Image src={image} alt={alt} />
           </li>
         ))}
       </ul>
-      <div className="max-tablet:hidden">
+      <div className="smOnly:hidden">
         <Swiper
           modules={[EffectCoverflow]}
           coverflowEffect={{
@@ -46,7 +46,7 @@ const Gallery = () => (
         >
           {images.map(({ image, alt }, i) => (
             <SwiperSlide key={`${image.src}-${i}`}>
-              <div className="w-fit mx-auto">
+              <div className="mx-auto w-fit">
                 <Image src={image} alt={alt} width="411" />
               </div>
             </SwiperSlide>

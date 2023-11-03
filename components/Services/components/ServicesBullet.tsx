@@ -8,16 +8,16 @@ const ServicesBullet: React.FC<IProps> = ({ className, alt, call }) => {
   return (
     <div className={className}>
       <button
-        className="w-[170px] text-[20px] font-extralight leading-[17px] text-left uppercase opacity-50
-                      transition-all hover:opacity-100 hover:translate-x-[14px] focus:opacity-100 focus:translate-x-[14px]
-                      tablet:w-[220px] tablet:text-[22px] tablet:leading-[18px]
-                      desktop:w-[238px] desktop:text-[28px] desktop:leading-[24px]"
+        className="xl:w-[238px] xl:text-[28px] xl:leading-[24px] md:w-[220px] md:text-[22px] md:leading-[18px] w-[170px]
+                      text-left text-[20px] font-extralight uppercase leading-[17px]
+                      opacity-50 transition-all hover:translate-x-[14px]
+                      hover:opacity-100 focus:translate-x-[14px] focus:opacity-100"
       >
         {alt}
       </button>
       <p
-        className="call transition-opacity max-desktop:hidden font-thin
-                        text-[12px] leading-[24px] tracking-[2.4px]"
+        className="call max-xl:hidden text-[12px] font-thin
+                        leading-[24px] tracking-[2.4px] transition-opacity"
       >
         {call}
       </p>

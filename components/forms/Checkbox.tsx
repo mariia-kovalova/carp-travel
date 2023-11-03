@@ -8,8 +8,8 @@ interface IProps {
 const Checkbox: React.FC<IProps> = ({ id, inputName, label, register }) => (
   <label
     htmlFor={id}
-    className="self-start flex gap-[8px] items-start
-                tablet:w-[192px] desktop:w-[258px]"
+    className="xl:w-[258px] md:w-[192px] flex items-start
+                gap-[8px] self-start"
   >
     <input
       className="visually-hidden career-checkbox"
@@ -18,8 +18,8 @@ const Checkbox: React.FC<IProps> = ({ id, inputName, label, register }) => (
       {...register(inputName)}
     />
     <span
-      className="checkbox-indicator block w-[22px] h-[22px] shrink-0 border-[1px] 
-                  desktop:w-[24px] desktop:h-[24px]"
+      className="checkbox-indicator xl:w-[24px] xl:h-[24px] block h-[22px] w-[22px] 
+                  shrink-0 border-[1px]"
     />
     <span className="text-[12px] font-extralight leading-[24px]">{label}</span>
   </label>

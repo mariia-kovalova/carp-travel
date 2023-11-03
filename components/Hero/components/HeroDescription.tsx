@@ -7,32 +7,32 @@ const { description_p2, description_p3, button } = info;
 
 const HeroDescription = () => (
   <div
-    className="flex flex-col gap-[24px] 
-                tablet:gap-[56px] tablet:basis-[230px]
-                desktop:gap-[181px] desktop:basis-[297px]"
+    className="xl:basis-[297px] xl:gap-[181px] md:basis-[230px] 
+                md:gap-[56px] flex
+                flex-col gap-[24px]"
   >
-    <div className="max-tablet:absolute top-[105px] right-0 uppercase">
+    <div className="smOnly:absolute right-0 top-[105px] uppercase">
       <p
-        className="mb-[-14px] text-[37px] font-thin 
-                    tablet:mb-[-20px] tablet:text-[67px]
-                    desktop:mb-[-34px] desktop:text-[98px]"
+        className="xl:mb-[-34px] xl:text-[98px] md:mb-[-20px] 
+                    md:text-[67px] mb-[-14px]
+                    text-[37px] font-thin"
       >
         <span className="font-medium">{description_p2.accent}</span>
-        <span className="tablet:max-desktop:tracking-[8.71px]">
+        <span className="mdOnly:tracking-[8.71px]">
           {description_p2.text.p1}
         </span>
       </p>
       <p
-        className="text-[12px] font-extralight tracking-[9.48px]
-                    tablet:text-[14px] tablet:tracking-[25.9px]
-                    desktop:text-[16px] desktop:tracking-[34.5px]"
+        className="xl:text-[16px] xl:tracking-[34.5px] md:text-[14px]
+                    md:tracking-[25.9px] text-[12px]
+                    font-extralight tracking-[9.48px]"
       >
         {description_p2.text.p2}
       </p>
     </div>
     <div
-      className="flex flex-col gap-[24px] items-center 
-                  tablet:gap-[28px]"
+      className="md:gap-[28px] flex flex-col items-center 
+                  gap-[24px]"
     >
       <p className="section-description text-justify">{description_p3.text}</p>
 

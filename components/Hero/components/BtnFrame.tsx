@@ -1,5 +1,5 @@
 const MobileFrame = () => (
-  <div className="tablet:hidden absolute top-0 left-0 w-full flex justify-between">
+  <div className="md:hidden absolute left-0 top-0 flex w-full justify-between">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="42"
@@ -62,7 +62,7 @@ const MobileFrame = () => (
 );
 
 const TabletFrame = () => (
-  <div className="max-mobile:hidden desktop:hidden absolute top-0 left-0 w-full flex justify-between">
+  <div className="xl:hidden absolute left-0 top-0 flex w-full justify-between max-mobile:hidden">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="35"
@@ -125,7 +125,7 @@ const TabletFrame = () => (
 );
 
 const DesktopFrame = () => (
-  <div className="max-desktop:hidden absolute top-0 left-0 w-full flex justify-between">
+  <div className="notXl:hidden absolute left-0 top-0 flex w-full justify-between">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="44"

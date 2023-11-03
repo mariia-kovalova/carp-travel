@@ -24,17 +24,12 @@ const BtnLink: React.FC<IProps> = ({ text, href }) => {
     <Link
       href={href}
       onClick={handleScroll}
-      className="relative block px-[18px] py-[3px] w-[280px]
-               bg-transparent-white-light transition-colors
-               hover:bg-transparent-white-light-accent 
-               focus:bg-transparent-white-light-accent
-                tablet:py-[1px] tablet:w-full 
-                desktop:p-[11px]"
+      className="xl:p-[11px] md:w-full md:py-[1px] relative block
+               w-[280px] bg-white/10
+               px-[18px] py-[3px] transition-colors
+              hover:bg-white/20 focus:bg-white/20 active:bg-white/20"
     >
-      <p
-        className="text-[18px] font-bold leading-[48px] uppercase text-center 
-                  desktop:text-[32px]"
-      >
+      <p className="xl:text-[32px] text-center text-[18px] font-bold uppercase leading-[48px]">
         {text}
       </p>
       <BtnFrame />

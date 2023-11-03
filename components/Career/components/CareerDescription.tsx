@@ -6,37 +6,37 @@ import CareerCall from './CareerCall';
 const { description_2, sub_title } = info;
 
 const CareerDescription = () => (
-  <div className="relative tablet:flex tablet:gap-[20px] desktop:gap-[24px]">
-    <div className="desktop:pl-[64px]">
+  <div className="xl:gap-[24px] md:flex md:gap-[20px] relative">
+    <div className="xl:pl-[64px]">
       <p
-        className="mb-[36px] font-extralight text-[30px] uppercase 
-                    max-tablet:text-right max-tablet:mr-[47px]
-                    tablet:ml-[88px] tablet:mb-[54px] 
-                    desktop:mb-[45px] desktop:ml-[98px] desktop:text-[36px] desktop:leading-[39px]"
+        className="smOnly:text-right smOnly:mr-[47px] xl:mb-[45px] xl:ml-[98px] 
+                    xl:text-[36px] xl:leading-[39px]
+                    md:mb-[54px] md:ml-[88px] 
+                    mb-[36px] text-[30px] font-extralight uppercase"
       >
         {sub_title}
       </p>
       <ul
-        className="w-[181px] flex flex-col gap-[16px]
-                    tablet:gap-[24px] tablet:w-[221px]
-                    desktop:w-fit"
+        className="xl:w-fit md:w-[221px] md:gap-[24px] flex
+                    w-[181px] flex-col
+                    gap-[16px]"
       >
         {description_2.map(({ title, description }) => (
           <li
             key={title}
-            className="flex flex-col gap-[8px]
-                        desktop:flex-row desktop:gap-[24px]"
+            className="xl:flex-row xl:gap-[24px] flex
+                        flex-col gap-[8px]"
           >
             <p
-              className="text-right text-[14px] leading-[20px]
-                        tablet:text-[16px] desktop:text-[18px] 
-                        desktop:w-[253px] desktop:leading-[24px]"
+              className="xl:text-[18px] xl:w-[253px] xl:leading-[24px]
+                        md:text-[16px] text-right 
+                        text-[14px] leading-[20px]"
             >
               {title}
             </p>
             <p
-              className="text-right text-[12px] leading-[20px] font-extralight
-                        desktop:w-[285px] desktop:leading-[24px] desktop:text-left"
+              className="xl:w-[285px] xl:leading-[24px] xl:text-left text-right
+                        text-[12px] font-extralight leading-[20px]"
             >
               {description}
             </p>
@@ -45,8 +45,8 @@ const CareerDescription = () => (
       </ul>
     </div>
     <div
-      className="max-tablet:absolute max-tablet:w-full max-tablet:pt-[111px]
-                  max-desktop:pt-[98px] desktop:w-[calc(100%-562px)]"
+      className="smOnly:absolute smOnly:w-full smOnly:pt-[111px]
+                  max-xl:pt-[98px] xl:w-[calc(100%-562px)]"
     >
       <CareerCall />
       <CareerForm />

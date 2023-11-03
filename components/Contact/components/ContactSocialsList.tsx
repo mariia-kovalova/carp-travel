@@ -3,13 +3,13 @@ import info from '@/data/contact.data.json';
 import ContactSocial from './ContactSocial';
 
 const ContactSocialsList = () => (
-  <div className="flex gap-[20px] justify-end">
-    <b className="text-[12px] font-extralight leading-[20px] desktop:leading-[24px]">
+  <div className="flex justify-end gap-[20px]">
+    <b className="xl:leading-[24px] text-[12px] font-extralight leading-[20px]">
       Follow us
     </b>
     <ul
-      className="flex flex-col w-[81px] text-[14px] leading-[24px]
-                tablet:text-[16px] default:text-[18px]"
+      className="md:text-[16px] flex w-[81px] flex-col text-[14px]
+                leading-[24px] default:text-[18px]"
     >
       {info.social.items.map(({ href, text }) => (
         <li key={text}>

@@ -1,38 +1,50 @@
 import type { Metadata } from 'next';
+import { Inter, Karantina } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 
+import Header from '@/components/Header/Header';
 import info from '@/data/website.data.json';
 
-import Header from '@/components/Header/Header';
+import './globals.css';
 
-import fonts from './fonts';
-import '../styles/globals.css';
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
+const karantina = Karantina({
+  weight: ['400'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-katarina',
+});
 
 const { BASE_URL } = process.env;
 
 export const metadata: Metadata = {
   title: info.title,
   description: info.description,
-  icons: {
-    icon: [
-      {
-        url: 'favicon/favicon-black.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: 'favicon/favicon-white.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-    ],
-  },
-  openGraph: {
-    title: info.title,
-    description: info.description,
-    siteName: info.title,
-    type: 'website',
-    url: BASE_URL,
-    images: [{ url: 'images/ogp/logo.png' }, { url: 'images/ogp/logo.jpg' }],
-  },
+  // icons: {
+  //   icon: [
+  //     {
+  //       url: 'favicon/favicon-black.png',
+  //       media: '(prefers-color-scheme: light)',
+  //     },
+  //     {
+  //       url: 'favicon/favicon-white.png',
+  //       media: '(prefers-color-scheme: dark)',
+  //     },
+  //   ],
+  // },
+  // openGraph: {
+  //   title: info.title,
+  //   description: info.description,
+  //   siteName: info.title,
+  //   type: 'website',
+  //   url: BASE_URL,
+  //   images: [{ url: 'images/ogp/logo.png' }, { url: 'images/ogp/logo.jpg' }],
+  // },
 };
 
 export default function RootLayout({
@@ -42,7 +54,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${fonts.inter.className} text-white bg-fall-back`}>
+      <body className={`${inter.variable} ${karantina.variable}`}>
         <Header />
         <main>{children}</main>
         <div id="modal-root"></div>

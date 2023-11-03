@@ -16,12 +16,12 @@ const Header = () => {
   };
 
   return (
-    <header className="absolute left-[50%] translate-x-[-50%] z-[2] w-full h-[146px]">
-      <div className="container flex justify-between items-center mt-[28px] tablet:mt-[16px]">
+    <header className="absolute left-[50%] z-[2] h-[146px] w-full translate-x-[-50%]">
+      <div className="md:mt-[16px] container mt-[28px] flex items-center justify-between">
         <Logo />
         <NavBar />
         <button
-          className="tablet:hidden text-[14px] font-normal leading-normal tracking-[1.4px] uppercase"
+          className="md:hidden text-[14px] font-normal uppercase leading-normal tracking-[1.4px]"
           type="button"
           onClick={handleToggleMenu}
         >

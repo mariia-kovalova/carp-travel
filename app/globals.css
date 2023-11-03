@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  @apply font-inter bg-fallback text-white;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container-padding {
+  @apply xl:py-[104px] md:py-[64px] py-[56px];
+}
+
+.section-title {
+  @apply xl:text-[98px] xl:leading-tight xl:tracking-[-3.92px] md:text-[67px] md:leading-tight md:tracking-[-2.68px] text-[40px] font-thin uppercase leading-[56px] tracking-[-1.6px];
+}
+
+.section-description {
+  @apply xl:text-[18px] xl:leading-[24px] md:text-[16px] text-[14px] font-extralight leading-[20px];
+}
+
+.background-image {
+  @apply bg-cover bg-center bg-no-repeat;
+}
+
+.base-btn {
+  @apply block px-[4px] text-[30px] font-medium uppercase transition-colors hover:bg-white/20 focus:bg-white/20;
+}

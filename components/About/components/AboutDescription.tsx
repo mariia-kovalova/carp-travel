@@ -3,28 +3,28 @@ import info from '@/data/about.data.json';
 const AboutDescription = () => {
   return (
     <div
-      className="flex flex-col gap-[40px] mt-[40px] 
-                  tablet:gap-[64px] tablet:mt-[-64px] 
-                  desktop:flex-row-reverse desktop:justify-between desktop:mt-[72px]"
+      className="xl:flex-row-reverse xl:justify-between xl:mt-[72px] md:mt-[-64px] 
+                  md:gap-[64px] mt-[40px] 
+                  flex flex-col gap-[40px]"
     >
-      <div className="w-[180px] max-tablet:self-end tablet:w-[220px] desktop:w-[297px]">
-        <p className="section-description uppercase font-medium">
+      <div className="xl:w-[297px] smOnly:self-end md:w-[220px] w-[180px]">
+        <p className="section-description font-medium uppercase">
           {info.description_p3.accent.part_1}
         </p>
-        <p className="section-description uppercase font-medium text-right">
+        <p className="section-description text-right font-medium uppercase">
           {info.description_p3.accent.part_2}
         </p>
         <p
-          className="section-description tracking-[-0.14px]
-                    tablet:tracking-[0.32px]
-                    desktop:tracking-[2.16px]"
+          className="section-description xl:tracking-[2.16px]
+                    md:tracking-[0.32px]
+                    tracking-[-0.14px]"
         >
           {info.description_p3.text}
         </p>
       </div>
       <p
-        className="section-description tablet:w-[463px] 
-                  tablet:max-desktop:self-end desktop:w-[605px]"
+        className="section-description mdOnly:self-end 
+                  xl:w-[605px] md:w-[463px]"
       >
         <span className="font-medium">{info.description_p4.accent}</span>{' '}
         {info.description_p4.text}

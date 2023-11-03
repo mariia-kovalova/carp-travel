@@ -14,22 +14,22 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="max-tablet:hidden">
+    <nav className="smOnly:hidden">
       <ul
-        className="flex font-normal text-[14px] leading-[17px] tracking-[ 0.1em]
-                  tablet:gap-[16px] desktop:gap-[48px]"
+        className="tracking-[ 0.1em] xl:gap-[48px] md:gap-[16px] flex text-[14px]
+                  font-normal leading-[17px]"
       >
         {NavBarLinks.map(({ href, title }) => (
           <li
-            className="hover:scale-[1.1] focus:scale-[1.1] transition-transform"
+            className="transition-transform hover:scale-[1.1] focus:scale-[1.1]"
             key={href}
           >
             <Link
               href={href}
               onClick={handleScroll}
               className="p-[4px] transition-colors
-                        hover:bg-transparent-white-dark 
-                        focus:bg-transparent-white-dark"
+                        hover:bg-white/5 
+                        focus:bg-white/5"
             >
               {title}
             </Link>

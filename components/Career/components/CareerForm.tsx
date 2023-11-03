@@ -49,23 +49,23 @@ const CareerForm = () => {
       onSubmit={handleSubmit(onSubmit)}
       autoComplete="off"
     >
-      <div className="tablet:flex tablet:gap-[20px] desktop:gap-[24px]">
+      <div className="xl:gap-[24px] md:flex md:gap-[20px]">
         <ul>
           {fields.map(field => (
-            <li className="mb-[16px] desktop:mb-[24px]" key={field.id}>
+            <li className="xl:mb-[24px] mb-[16px]" key={field.id}>
               <Field {...field} register={register} errors={errors} />
             </li>
           ))}
         </ul>
-        <div className="h-[196px] tablet:h-[260px] desktop:w-[292px] desktop:h-[305px]">
+        <div className="xl:h-[305px] xl:w-[292px] md:h-[260px] h-[196px]">
           <Textarea {...textarea} register={register} />
         </div>
       </div>
 
-      <div className="max-tablet:mt-[18px] tablet:flex justify-between">
+      <div className="smOnly:mt-[18px] md:flex justify-between">
         <Checkbox {...checkbox} register={register} />
 
-        <div className="tablet:max-desktop:mt-[-14px] desktop:mt-[-18px]">
+        <div className="mdOnly:mt-[-14px] xl:mt-[-18px]">
           <SubmitBtn text={button.text} />
         </div>
       </div>
