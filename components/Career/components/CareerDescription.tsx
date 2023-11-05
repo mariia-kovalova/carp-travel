@@ -12,7 +12,7 @@ const CareerDescription = () => (
         className="smOnly:text-right smOnly:mr-[47px] xl:mb-[45px] xl:ml-[98px] 
                     xl:text-[36px] xl:leading-[39px]
                     md:mb-[54px] md:ml-[88px] 
-                    mb-[36px] text-[30px] font-extralight uppercase"
+                    mb-[36px] text-[30px]  uppercase"
       >
         {sub_title}
       </p>
@@ -28,15 +28,15 @@ const CareerDescription = () => (
                         flex-col gap-[8px]"
           >
             <p
-              className="xl:text-[18px] xl:w-[253px] xl:leading-[24px]
-                        md:text-[16px] text-right 
-                        text-[14px] leading-[20px]"
+              className="xl:text-lg xl:w-[253px] xl:leading-[24px]
+                        md:text-base text-right 
+                         leading-[20px]"
             >
               {title}
             </p>
             <p
               className="xl:w-[285px] xl:leading-[24px] xl:text-left text-right
-                        text-[12px] font-extralight leading-[20px]"
+                        text-xs  leading-[20px]"
             >
               {description}
             </p>

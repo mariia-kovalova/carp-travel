@@ -21,7 +21,7 @@ const Checkbox: React.FC<IProps> = ({ id, inputName, label, register }) => (
       className="checkbox-indicator xl:w-[24px] xl:h-[24px] block h-[22px] w-[22px] 
                   shrink-0 border-[1px]"
     />
-    <span className="text-[12px] font-extralight leading-[24px]">{label}</span>
+    <span className="text-xs  leading-[24px]">{label}</span>
   </label>
 );
 

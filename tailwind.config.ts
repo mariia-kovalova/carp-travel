@@ -34,6 +34,7 @@ const config: Config = {
         inter: ['var(--font-inter)'],
         katarina: ['var(--font-katarina)'],
       },
+      // COLORS
       colors: {
         error: '#ff5757',
         fallback: '#396366',

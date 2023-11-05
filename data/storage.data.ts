@@ -3,4 +3,4 @@ const STORAGE_KEYS = {
   contact_form: 'contact_form',
 };
 
-export default STORAGE_KEYS;
+export const { career_form, contact_form } = STORAGE_KEYS;

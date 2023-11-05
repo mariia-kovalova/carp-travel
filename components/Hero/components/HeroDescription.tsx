@@ -1,21 +1,21 @@
-import LINKS from '@/constants/links';
 import info from '@/data/hero.data.json';
 
 import BtnLink from './BtnLink';
+import { contact } from '@/data/links.data';
 
 const { description_p2, description_p3, button } = info;
 
 const HeroDescription = () => (
   <div
-    className="xl:basis-[297px] xl:gap-[181px] md:basis-[230px] 
-                md:gap-[56px] flex
-                flex-col gap-[24px]"
+    className="flex flex-col gap-[24px] 
+                md:basis-[230px] md:gap-[56px]
+                xl:basis-[297px] xl:gap-[181px]"
   >
-    <div className="smOnly:absolute right-0 top-[105px] uppercase">
+    <div className="right-0 top-[105px] uppercase smOnly:absolute">
       <p
-        className="xl:mb-[-34px] xl:text-[98px] md:mb-[-20px] 
-                    md:text-[67px] mb-[-14px]
-                    text-[37px] font-thin"
+        className="mb-[-14px] text-[37px] font-thin 
+                    md:mb-[-20px] md:text-[67px]
+                    xl:mb-[-34px] xl:text-[98px]"
       >
         <span className="font-medium">{description_p2.accent}</span>
         <span className="mdOnly:tracking-[8.71px]">
@@ -23,20 +23,20 @@ const HeroDescription = () => (
         </span>
       </p>
       <p
-        className="xl:text-[16px] xl:tracking-[34.5px] md:text-[14px]
-                    md:tracking-[25.9px] text-[12px]
-                    font-extralight tracking-[9.48px]"
+        className="md: text-xs tracking-[9.48px]
+                    md:tracking-[25.9px] xl:text-base
+                     xl:tracking-[34.5px]"
       >
         {description_p2.text.p2}
       </p>
     </div>
     <div
-      className="md:gap-[28px] flex flex-col items-center 
-                  gap-[24px]"
+      className="flex flex-col items-center gap-[24px] 
+                  md:gap-[28px]"
     >
       <p className="section-description text-justify">{description_p3.text}</p>
 
-      <BtnLink text={button.text} href={`#${LINKS.contact}`} />
+      <BtnLink text={button.text} href={contact} />
     </div>
   </div>
 );

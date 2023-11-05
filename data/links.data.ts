@@ -1,5 +1,4 @@
 const LINKS = {
-  hero: 'hero',
   about: 'about',
   services: 'services',
   career: 'career',
@@ -7,4 +6,4 @@ const LINKS = {
   contact: 'contact',
 };
 
-export default LINKS;
+export const { about, services, career, contact, gallery } = LINKS;

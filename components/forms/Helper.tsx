@@ -10,8 +10,8 @@ interface IProps {
 
 const Helper: React.FC<IProps> = ({ inputName, errors }) => (
   <p
-    className="absolute bottom-[-23px] right-0 flex gap-[5px] items-center
-            text-[12px] font-extralight leading-[24px] tracking-[2.4px] text-error"
+    className="absolute bottom-[-23px] right-0 flex items-center gap-[5px]
+            text-xs  leading-[24px] tracking-[2.4px] text-error"
   >
     <Cross />
     <ErrorMessage errors={errors} name={inputName} />

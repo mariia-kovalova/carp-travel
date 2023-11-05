@@ -5,4 +5,4 @@ const SCREENS = {
   desktop: '1280px',
 };
 
-export default SCREENS;
+export const { min, mobile, tablet, desktop } = SCREENS;

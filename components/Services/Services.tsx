@@ -5,7 +5,6 @@ import { useState } from 'react';
 import { EffectFade, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import LINKS from '@/constants/links';
 import info from '@/data/services.data.json';
 
 import ServicesBullet from './components/ServicesBullet';
@@ -17,6 +16,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import '@/styles/swiper-pagination.css';
 import '@/styles/services.css';
+import { services } from '@/data/links.data';
 
 const { slides } = info;
 
@@ -28,7 +28,7 @@ const pagination = {
         className={className}
         alt={slides[index].alt}
         call={slides[index].call}
-      />
+      />,
     ),
 };
 
@@ -37,10 +37,10 @@ const Services = () => {
 
   return (
     <section
-      id={LINKS.services}
+      id={services}
       className={`services service-${bgVariant} background-image min-h-screen`}
     >
-      <div className="container container-padding">
+      <div className="container-padding container">
         <Swiper
           modules={[Pagination, EffectFade]}
           pagination={pagination}

@@ -27,7 +27,7 @@ const ServicesDescription: React.FC<IProps> = ({
                 justify-between"
     >
       <p
-        className="xl:hidden md:text-left text-right text-[12px] font-extralight
+        className="xl:hidden md:text-left text-right text-xs 
                     leading-[24px]
                     tracking-[2.4px]"
       >

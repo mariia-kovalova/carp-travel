@@ -9,7 +9,7 @@ const HeroTitle = () => (
     </h1>
     <p
       className="mdOnly:w-[262px] xl:leading-[24px] xl:tracking-[1.44px]
-                  md:text-[14px] md:tracking-[1.26px] text-[10px]
+                  md: md:tracking-[1.26px] text-[10px]
                   font-thin leading-[16px]"
     >
       {description_p1.text}

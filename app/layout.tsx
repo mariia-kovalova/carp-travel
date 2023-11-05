@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { Inter, Karantina } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 
-import Header from '@/components/Header/Header';
-import info from '@/data/website.data.json';
+import { Header } from '@/components/Header';
+import data from '@/data/common.data.json';
 
 import './globals.css';
 
@@ -20,11 +20,12 @@ const karantina = Karantina({
   variable: '--font-katarina',
 });
 
-const { BASE_URL } = process.env;
+// const { BASE_URL } = process.env;
+const { title, description } = data;
 
 export const metadata: Metadata = {
-  title: info.title,
-  description: info.description,
+  title: title,
+  description: description,
   // icons: {
   //   icon: [
   //     {
@@ -57,7 +58,6 @@ export default function RootLayout({
       <body className={`${inter.variable} ${karantina.variable}`}>
         <Header />
         <main>{children}</main>
-        <div id="modal-root"></div>
         <Toaster position="top-right" toastOptions={{ duration: 2000 }} />
       </body>
     </html>

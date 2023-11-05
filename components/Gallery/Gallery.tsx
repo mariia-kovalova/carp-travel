@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow } from 'swiper/modules';
 
-import LINKS from '@/constants/links';
+import { gallery } from '@/data/links.data';
 import info from '@/data/gallery.data';
 
 import { SwiperNavButtons } from './components/SwiperNavButtons';
@@ -17,12 +17,12 @@ import '@/styles/gallery.css';
 const { images, images_mobile } = info;
 
 const Gallery = () => (
-  <section id={LINKS.gallery} className="gallery background-image min-h-screen">
+  <section id={gallery} className="gallery background-image min-h-screen">
     <div className="container-padding container">
-      <h2 className="section-title md:mb-[72px] mb-[24px]">
+      <h2 className="section-title mb-[24px] md:mb-[72px]">
         our <span className="font-medium">gallery</span>
       </h2>
-      <ul className="md:hidden flex flex-col gap-[24px]">
+      <ul className="flex flex-col gap-[24px] md:hidden">
         {images_mobile.map(({ image, alt }) => (
           <li key={`${image.src}-mobile`}>
             <Image src={image} alt={alt} />

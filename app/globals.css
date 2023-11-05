@@ -7,7 +7,7 @@
 }
 
 body {
-  @apply font-inter bg-fallback text-white;
+  @apply bg-fallback font-inter text-sm font-extralight text-white;
 }
 
 .visually-hidden {
@@ -24,16 +24,20 @@ body {
   overflow: hidden;
 }
 
+.common-transition {
+  @apply transition duration-300;
+}
+
 .container-padding {
-  @apply xl:py-[104px] md:py-[64px] py-[56px];
+  @apply py-[56px] md:py-[64px] xl:py-[104px];
 }
 
 .section-title {
-  @apply xl:text-[98px] xl:leading-tight xl:tracking-[-3.92px] md:text-[67px] md:leading-tight md:tracking-[-2.68px] text-[40px] font-thin uppercase leading-[56px] tracking-[-1.6px];
+  @apply text-[40px] font-thin uppercase leading-[56px] tracking-[-1.6px] md:text-[67px] md:leading-tight md:tracking-[-2.68px] xl:text-[98px] xl:leading-tight xl:tracking-[-3.92px];
 }
 
 .section-description {
-  @apply xl:text-[18px] xl:leading-[24px] md:text-[16px] text-[14px] font-extralight leading-[20px];
+  @apply leading-[20px] md:text-base xl:text-lg xl:leading-[24px];
 }
 
 .background-image {

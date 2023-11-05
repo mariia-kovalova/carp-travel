@@ -1,8 +1,5 @@
+import { desktop, min, tablet } from '@/data/screens.data';
 import Image from 'next/image';
-
-import SCREENS from '@/constants/screens';
-
-const { desktop, min, tablet } = SCREENS;
 
 interface IProps {
   number: number;

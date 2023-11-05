@@ -42,7 +42,7 @@ const Field: React.FC<IProps> = ({
               ${type === 'tel' ? 'tel' : ''} 
               ${isError ? 'text-error' : ''}
               xl:py-[2px] xl:text-[20px] text-[13px]
-              font-extralight leading-[24px]`}
+               leading-[24px]`}
           id={id}
           type={type}
           placeholder={placeholder}

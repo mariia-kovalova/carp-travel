@@ -7,7 +7,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import info from '@/data/career.data.json';
 import schemas from '@/validation/schemas';
 import notify from '@/utils/notify';
-import STORAGE_KEYS from '@/constants/localStorageKeys';
+import STORAGE_KEYS from '@/data/storage.data';
 import VALIDATION_MESSAGES from '@/validation/messages';
 
 import Field from '@/components/forms/Field';
@@ -49,23 +49,23 @@ const CareerForm = () => {
       onSubmit={handleSubmit(onSubmit)}
       autoComplete="off"
     >
-      <div className="xl:gap-[24px] md:flex md:gap-[20px]">
+      <div className="md:flex md:gap-[20px] xl:gap-[24px]">
         <ul>
           {fields.map(field => (
-            <li className="xl:mb-[24px] mb-[16px]" key={field.id}>
+            <li className="mb-[16px] xl:mb-[24px]" key={field.id}>
               <Field {...field} register={register} errors={errors} />
             </li>
           ))}
         </ul>
-        <div className="xl:h-[305px] xl:w-[292px] md:h-[260px] h-[196px]">
+        <div className="h-[196px] md:h-[260px] xl:h-[305px] xl:w-[292px]">
           <Textarea {...textarea} register={register} />
         </div>
       </div>
 
-      <div className="smOnly:mt-[18px] md:flex justify-between">
+      <div className="justify-between md:flex smOnly:mt-[18px]">
         <Checkbox {...checkbox} register={register} />
 
-        <div className="mdOnly:mt-[-14px] xl:mt-[-18px]">
+        <div className="xl:mt-[-18px] mdOnly:mt-[-14px]">
           <SubmitBtn text={button.text} />
         </div>
       </div>

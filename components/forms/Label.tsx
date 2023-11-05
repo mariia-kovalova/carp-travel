@@ -6,7 +6,7 @@ interface IProps {
 
 const Label: React.FC<IProps> = ({ id, label, extraClass }) => (
   <label
-    className={`text-[12px] font-extralight leading-[24px] tracking-[2.4px] ${extraClass}`}
+    className={`text-xs  leading-[24px] tracking-[2.4px] ${extraClass}`}
     htmlFor={id}
   >
     {label}
