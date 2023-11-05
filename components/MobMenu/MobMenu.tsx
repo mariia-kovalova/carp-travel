@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { NavBar } from '../NavBar';
+import { NavBar } from '../ui/NavBar';
 
 export const MobMenu: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);

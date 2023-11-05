@@ -7,7 +7,7 @@
 }
 
 body {
-  @apply bg-fallback font-inter text-sm font-extralight text-white;
+  @apply font-inter text-sm font-extralight text-white;
 }
 
 .visually-hidden {
@@ -28,22 +28,56 @@ body {
   @apply transition duration-300;
 }
 
-.container-padding {
-  @apply py-[56px] md:py-[64px] xl:py-[104px];
+.section {
+  @apply bg-fallback py-14 md:py-16 xl:py-[104px];
 }
 
 .section-title {
   @apply text-[40px] font-thin uppercase leading-[56px] tracking-[-1.6px] md:text-[67px] md:leading-tight md:tracking-[-2.68px] xl:text-[98px] xl:leading-tight xl:tracking-[-3.92px];
 }
 
-.section-description {
+.section-text {
   @apply leading-[20px] md:text-base xl:text-lg xl:leading-[24px];
 }
 
-.background-image {
-  @apply bg-cover bg-center bg-no-repeat;
+.base-btn {
+  @apply block px-[4px] text-[30px] font-medium uppercase transition-colors hover:bg-white/20 focus:bg-white/20 active:bg-white/20;
 }
 
-.base-btn {
-  @apply block px-[4px] text-[30px] font-medium uppercase transition-colors hover:bg-white/20 focus:bg-white/20;
+/* BACKGROUNDS */
+
+.background-image {
+  @apply mx-auto max-w-[1920px] bg-cover bg-center bg-no-repeat;
+}
+
+.hero {
+  background-image: image-set(
+    '/images/hero/hero@x1.webp' 1x,
+    '/images/hero/hero@x2.webp' 2x
+  );
+}
+
+.about {
+  background-image: image-set(
+    '/images/about/about@x1.webp' 1x,
+    '/images/about/about@x2.webp' 2x
+  );
+}
+
+@media screen and (max-width: 1280px) {
+  .about {
+    background-position: 10%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    background-position: 15%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about {
+    background-position: 25%;
+  }
 }

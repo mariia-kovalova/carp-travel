@@ -14,26 +14,26 @@ const ServicesDescription: React.FC<IProps> = ({
   description,
 }) => (
   <div
-    className="xl:justify-between md:flex-row md:gap-[20px]
-                      flex flex-col
-                      gap-[12px]"
+    className="flex flex-col gap-[12px]
+                      md:flex-row md:gap-[20px]
+                      xl:justify-between"
   >
-    <div className="xl:w-[607px] md:w-[463px] w-[280px]">
+    <div className="w-[280px] md:w-[463px] xl:w-[607px]">
       <ServicesPicture number={number} alt={alt} />
     </div>
     <div
-      className="max-xl:h-[166px] xl:w-[293px] smOnly:h-[362px] md:w-[221px]  
-                md:self-end flex flex-col
-                justify-between"
+      className="max-xl:h-[166px] flex flex-col justify-between  
+                md:w-[221px] md:self-end xl:w-[293px]
+                smOnly:h-[362px]"
     >
       <p
-        className="xl:hidden md:text-left text-right text-xs 
-                    leading-[24px]
-                    tracking-[2.4px]"
+        className="text-right text-xs leading-[24px] tracking-[2.4px] 
+                    md:text-left
+                    xl:hidden"
       >
         {call}
       </p>
-      <p className="section-description mdOnly:text-[13px] md:text-justify">
+      <p className="section-text md:text-justify mdOnly:text-[13px]">
         {description}
       </p>
     </div>
