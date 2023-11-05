@@ -7,7 +7,6 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import info from '@/data/career.data.json';
 import schemas from '@/validation/schemas';
 import notify from '@/utils/notify';
-import STORAGE_KEYS from '@/data/storage.data';
 import VALIDATION_MESSAGES from '@/validation/messages';
 
 import Field from '@/components/forms/Field';
@@ -16,9 +15,9 @@ import Checkbox from '@/components/forms/Checkbox';
 import SubmitBtn from '@/components/forms/SubmitBtn';
 
 import '@/styles/forms.css';
+import { career_form } from '@/data/storage.data';
 
 const { fields, checkbox, textarea, button } = info;
-const { career_form } = STORAGE_KEYS;
 
 const CareerForm = () => {
   const {

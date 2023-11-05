@@ -4,8 +4,8 @@ import { useForm } from 'react-hook-form';
 import useFormPersist from 'react-hook-form-persist';
 import { yupResolver } from '@hookform/resolvers/yup';
 
+import { contact_form } from '@/data/storage.data';
 import info from '@/data/contact.data.json';
-import STORAGE_KEYS from '@/data/storage.data';
 import schemas from '@/validation/schemas';
 import notify from '@/utils/notify';
 
@@ -16,7 +16,6 @@ import SubmitBtn from '@/components/forms/SubmitBtn';
 import '@/styles/forms.css';
 
 const { fields, textarea, button } = info;
-const { contact_form } = STORAGE_KEYS;
 
 const ContactForm = () => {
   const {
