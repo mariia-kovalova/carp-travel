@@ -41,10 +41,10 @@ body {
 }
 
 .base-btn {
-  @apply block px-[4px] text-[30px] font-medium uppercase transition-colors hover:bg-white/20 focus:bg-white/20 active:bg-white/20;
+  @apply common-transition block px-[4px] py-2 text-[30px] font-medium uppercase hover:bg-white/20 focus:bg-white/20 active:bg-white/20;
 }
 
-/* BACKGROUNDS */
+/* === BACKGROUNDS === */
 
 .background-image {
   @apply mx-auto max-w-[1920px] bg-cover bg-center bg-no-repeat;
@@ -80,4 +80,98 @@ body {
   .about {
     background-position: 25%;
   }
+}
+
+.services-1 {
+  background-image: image-set(
+    '/images/services/services-1@x1.webp' 1x,
+    '/images/services/services-1@x2.webp' 2x
+  );
+}
+
+.services-2 {
+  background-image: image-set(
+    '/images/services/services-2@x1.webp' 1x,
+    '/images/services/services-2@x2.webp' 2x
+  );
+}
+
+.services-3 {
+  background-image: image-set(
+    '/images/services/services-3@x1.webp' 1x,
+    '/images/services/services-3@x2.webp' 2x
+  );
+}
+
+.services-4 {
+  background-image: image-set(
+    '/images/services/services-4@x1.webp' 1x,
+    '/images/services/services-4@x2.webp' 2x
+  );
+}
+
+.services-5 {
+  background-image: image-set(
+    '/images/services/services-5@x1.webp' 1x,
+    '/images/services/services-5@x2.webp' 2x
+  );
+}
+
+.gallery {
+  background-image: image-set(
+    '/images/gallery/gallery@x1.webp' 1x,
+    '/images/gallery/gallery@x2.webp' 2x
+  );
+}
+
+/* === SWIPER === */
+
+/* pagination */
+
+.swiper-pagination-bullets {
+  @apply !top-[82vw] !flex !w-fit !flex-col !gap-4 !text-left sm:!top-[393px] md:!left-[484px] md:!top-0 xl:!left-[628px] xl:!gap-6;
+}
+
+.swiper-pagination-bullet {
+  @apply !m-0 !flex !h-fit !w-fit gap-[53px] !rounded-none !bg-transparent;
+}
+
+.swiper-pagination-bullet-active {
+  @apply common-transition relative translate-x-[14px] font-medium !opacity-100;
+}
+
+.swiper-pagination-bullet-active::before {
+  @apply absolute left-[-13px] top-1/2 h-[6px] w-[6px] -translate-y-1/2 rotate-45 bg-white content-[""];
+}
+
+.swiper-pagination-bullet {
+  @apply opacity-0;
+}
+
+/* navigation */
+
+.swiper-slide:not(.swiper-slide-next) {
+  @apply opacity-50;
+}
+
+/* services slider */
+
+.swiper-slide:nth-child(1) .comment {
+  @apply xl:top-0;
+}
+
+.swiper-slide:nth-child(2) .comment {
+  @apply xl:top-[52px];
+}
+
+.swiper-slide:nth-child(3) .comment {
+  @apply xl:top-[97px];
+}
+
+.swiper-slide:nth-child(5) .comment {
+  @apply xl:top-[168px];
+}
+
+.swiper-slide:nth-child(5) .comment {
+  @apply xl:top-[215px];
 }

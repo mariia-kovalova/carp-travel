@@ -11,6 +11,7 @@ export const HeroSection = () => (
     <div className="container relative flex flex-col gap-6 md:flex-row md:gap-12 xl:gap-[326px]">
       <div>
         <SectionTitle
+          tag="h1"
           title={title}
           isInversed={true}
           className="mb-6 md:mb-[68px] xl:mb-[148px]"
