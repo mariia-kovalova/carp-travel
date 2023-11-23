@@ -157,21 +157,21 @@ body {
 /* services slider */
 
 .swiper-slide:nth-child(1) .comment {
-  @apply xl:top-0;
+  @apply xl:top-[-4px];
 }
 
 .swiper-slide:nth-child(2) .comment {
-  @apply xl:top-[52px];
+  @apply xl:top-[48px];
 }
 
 .swiper-slide:nth-child(3) .comment {
-  @apply xl:top-[97px];
+  @apply xl:top-[88px];
+}
+
+.swiper-slide:nth-child(4) .comment {
+  @apply xl:top-[164px];
 }
 
 .swiper-slide:nth-child(5) .comment {
-  @apply xl:top-[168px];
-}
-
-.swiper-slide:nth-child(5) .comment {
-  @apply xl:top-[215px];
+  @apply xl:top-[216px];
 }
