@@ -17,21 +17,21 @@ export const HeroSection = () => (
           className="mb-6 md:mb-[68px] xl:mb-[148px]"
         />
 
-        <p className="w-[157px] text-[10px] leading-4 sm:w-fit md:w-[262px] md:text-sm md:tracking-[1.26px] xl:w-fit xl:text-base xl:leading-[24px] xl:tracking-[1.44px] mdOnly:w-[264px]">
+        <p className="w-[157px] text-[10px] leading-4 sm:w-fit md:w-[262px] md:text-sm md:leading-4 md:tracking-[1.26px] xl:w-fit xl:text-base xl:leading-[24px] xl:tracking-[1.44px] mdOnly:w-[264px]">
           {p1}
         </p>
       </div>
 
-      <div>
-        <div className="right-[15px] top-[-64px] flex flex-col gap-1 uppercase md:mb-14 md:gap-4 xl:mb-[181px] xl:gap-7 smOnly:absolute">
-          <p className="text-[37px] md:text-[67px] xl:text-[98px]">
-            <span className="font-medium">{p2._p1}</span>
-            <span className="font-thin smOnly:tracking-[1.6px] mdOnly:tracking-[8.71px]">
+      <div className="md:w-[230px] xl:w-[294px]">
+        <div className="right-[15px] top-[-64px] uppercase md:mb-14 md:mt-7 md:gap-4 xl:mb-[181px] xl:gap-7 smOnly:absolute">
+          <div className="flex text-[37px] md:mb-5 md:text-[67px] xl:text-[98px]">
+            <p className="font-medium">{p2._p1}</p>
+            <p className="font-thin tracking-[1.6px] md:tracking-[8.71px] xl:tracking-normal">
               {p2._p2}
-            </span>
-          </p>
+            </p>
+          </div>
 
-          <p className="text-xs font-light tracking-[9.48px] md:mb-7 md:text-sm md:tracking-[25.9px] xl:text-base xl:tracking-[34.5px]">
+          <p className="text-xs font-light tracking-[9.48px] md:text-sm md:tracking-[25.9px] xl:text-base xl:tracking-[34.5px]">
             {p2._p3}
           </p>
         </div>

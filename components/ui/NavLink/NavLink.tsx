@@ -13,8 +13,7 @@ export const NavLink: React.FC<NavLinkProps> = ({
     'block common-transition',
     'hover:scale-[1.1] hover:bg-white/5 focus:scale-[1.1] focus:bg-white/5 active:scale-[1.1] active:bg-white/5',
     {
-      'p-[4px] font-normal leading-[17px] tracking-[.1em]':
-        variant === 'header',
+      'font-normal leading-[17px] tracking-[.1em]': variant === 'header',
       'text-center text-lg font-normal leading-normal tracking-[1.8px]':
         variant === 'mobile-menu',
     },

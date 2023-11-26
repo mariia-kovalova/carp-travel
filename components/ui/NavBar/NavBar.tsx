@@ -1,9 +1,7 @@
 'use client';
 
 import classNames from 'classnames';
-
 import { NavLink } from '@/components/ui/NavLink';
-
 import { NavBarProps } from './types';
 import { navBarLinks } from '@/data/header.data';
 
@@ -15,7 +13,7 @@ export const NavBar: React.FC<NavBarProps> = ({
   const navBarClasses = classNames(
     'flex gap-12',
     {
-      'mdOnly:gap-4': variant === 'header',
+      'mdOnly:gap-6 mt-4': variant === 'header',
       'flex-col': variant === 'mobile-menu',
     },
     className,

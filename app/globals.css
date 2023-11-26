@@ -33,11 +33,11 @@ body {
 }
 
 .section-title {
-  @apply text-[40px] font-thin uppercase leading-[56px] tracking-[-1.6px] md:text-[67px] md:leading-tight md:tracking-[-2.68px] xl:text-[98px] xl:leading-tight xl:tracking-[-3.92px];
+  @apply text-[40px] font-thin uppercase leading-[56px] tracking-[-1.6px] md:text-[67px] md:leading-[1.2] md:tracking-[-2.68px] xl:text-[98px] xl:tracking-[-3.92px];
 }
 
 .section-text {
-  @apply leading-[20px] md:text-base xl:text-lg xl:leading-[24px];
+  @apply leading-5 md:text-base md:leading-5 xl:text-lg xl:leading-6;
 }
 
 .base-btn {

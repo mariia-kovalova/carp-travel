@@ -47,7 +47,7 @@ export const CareerForm = () => {
       onSubmit={handleSubmit(onSubmit)}
       autoComplete="off"
     >
-      <div className="md:flex md:gap-[20px] xl:gap-[24px]">
+      <div className="md:flex md:gap-7 xl:gap-[24px]">
         <ul>
           {fields.map(field => (
             <li className="mb-[16px] xl:mb-[24px]" key={field.id}>
@@ -63,11 +63,11 @@ export const CareerForm = () => {
         />
       </div>
 
-      <div className="md:flex md:justify-between">
-        <Checkbox className="smOnly:mt-4" register={register} {...checkbox} />
+      <div className="md:flex md:justify-between smOnly:mt-3">
+        <Checkbox register={register} {...checkbox} />
 
         <SubmitBtn
-          className="ml-auto mt-4 xl:mt-[-18px] mdOnly:mt-[-14px]"
+          className="mt-4 md:mt-[-22px] xl:mt-[-18px] smOnly:ml-auto"
           text={button.text}
         />
       </div>

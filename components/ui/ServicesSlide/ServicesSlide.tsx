@@ -6,7 +6,7 @@ export const ServicesSlide: React.FC<ServicesSlideProps> = ({
   comment,
   image: { src, alt },
 }) => (
-  <div className="relative flex h-[185vw] flex-col justify-between gap-5 md:h-[370px] md:flex-row md:items-end xl:h-[429px] smOnly:max-h-[680px]">
+  <div className="relative flex h-[185vw] flex-col justify-between gap-5 md:h-[378px] md:flex-row md:items-end xl:h-[429px] smOnly:max-h-[680px]">
     <div className="h-[66vw] w-full sm:h-[316px] md:h-full md:w-[463px] xl:w-[607px]">
       <Image
         className="h-full w-full object-cover object-center"

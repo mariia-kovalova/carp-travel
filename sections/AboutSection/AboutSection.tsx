@@ -14,14 +14,14 @@ export const AboutSection = () => (
 
         <div className="w-[180px] md:mt-[10px] md:w-[220px] xl:mt-[20px] xl:w-[292px] ">
           <TextWithAccent
-            content={p1}
             className="mb-[20px] md:mb-[16px] xl:mb-[24px]"
+            content={p1}
           />
           <TextWithAccent content={p2} />
         </div>
       </div>
 
-      <div className="mt-[40px] flex flex-col gap-[40px] md:mt-[-64px] md:gap-[64px] xl:mt-[72px] xl:flex-row-reverse xl:justify-between">
+      <div className="mt-10 flex flex-col gap-[40px] md:mt-[-60px] md:gap-[64px] xl:mt-[72px] xl:flex-row-reverse xl:justify-between">
         <div className="w-[180px] md:w-[220px] xl:w-[297px] smOnly:self-end">
           <p className="section-text font-medium uppercase">
             {p3.accent.part_1}
