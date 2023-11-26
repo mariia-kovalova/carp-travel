@@ -1,18 +1,17 @@
 'use client';
 
 import { useForm } from 'react-hook-form';
-import useFormPersist from 'react-hook-form-persist';
 import { yupResolver } from '@hookform/resolvers/yup';
-
-import data from '@/data/contact.data.json';
-import schemas from '@/validation/schemas';
-import notify from '@/utils/notify';
+import useFormPersist from 'react-hook-form-persist';
 
 import { Field } from '@/components/ui/Field';
 import { Textarea } from '@/components/ui/Textarea';
 import { SubmitBtn } from '@/components/ui/SubmitBtn';
 
 import { contact_form } from '@/data/storage.data';
+import { contact_schema } from '@/data/schemas.data';
+import data from '@/data/contact.data.json';
+import notify from '@/utils/notify';
 
 const { fields, textarea, button } = data.form;
 
@@ -25,7 +24,7 @@ export const ContactForm = () => {
     setValue,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(schemas.contact_schema),
+    resolver: yupResolver(contact_schema),
   });
 
   useFormPersist(contact_form, {

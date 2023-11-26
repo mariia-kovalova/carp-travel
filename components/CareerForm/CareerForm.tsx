@@ -1,13 +1,8 @@
 'use client';
 
 import { useForm, FieldValues } from 'react-hook-form';
-import useFormPersist from 'react-hook-form-persist';
 import { yupResolver } from '@hookform/resolvers/yup';
-
-import data from '@/data/career.data.json';
-import schemas from '@/validation/schemas';
-import notify from '@/utils/notify';
-import VALIDATION_MESSAGES from '@/validation/messages';
+import useFormPersist from 'react-hook-form-persist';
 
 import { Field } from '@/components/ui/Field';
 import { Textarea } from '@/components/ui/Textarea';
@@ -15,8 +10,13 @@ import { Checkbox } from '@/components/ui/Checkbox';
 import { SubmitBtn } from '@/components/ui/SubmitBtn';
 
 import { career_form } from '@/data/storage.data';
+import { career_schema } from '@/data/schemas.data';
+import notify from '@/utils/notify';
+import data from '@/data/career.data.json';
+import messages from '@/data/messages.data.json';
 
 const { fields, checkbox, textarea, button } = data.form;
+const { consentMes } = messages;
 
 export const CareerForm = () => {
   const {
@@ -27,7 +27,7 @@ export const CareerForm = () => {
     setValue,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(schemas.career_schema),
+    resolver: yupResolver(career_schema),
   });
 
   useFormPersist(career_form, {
@@ -36,7 +36,7 @@ export const CareerForm = () => {
   });
 
   const onSubmit = (values: FieldValues) => {
-    if (!values.consent) return notify.onWarn(VALIDATION_MESSAGES.consentMes);
+    if (!values.consent) return notify.onWarn(consentMes);
     reset();
     notify.onSuccess('Success');
   };
