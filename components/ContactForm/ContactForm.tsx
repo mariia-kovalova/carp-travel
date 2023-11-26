@@ -57,13 +57,13 @@ export const ContactForm = () => {
         </ul>
 
         <Textarea
-          className="h-[220px] md:h-[221px] md:flex-grow xl:h-[174px]"
+          className="h-[220px] md:h-[254px] md:flex-grow xl:h-[174px]"
           register={register}
           {...textarea}
         />
       </div>
 
-      <SubmitBtn className="ml-auto mt-4" text={button.text} />
+      <SubmitBtn className="ml-auto mt-4 md:mt-3" text={button.text} />
     </form>
   );
 };

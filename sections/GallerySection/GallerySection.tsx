@@ -13,7 +13,10 @@ const { title } = data;
 export const GallerySection = () => (
   <section id={gallery} className="section gallery background-image">
     <div className="container">
-      <SectionTitle title={title} className="mb-6 md:mb-20" />
+      <SectionTitle
+        title={title}
+        className="mb-6 md:mb-20 mdOnly:text-center"
+      />
       <div className="flex flex-col gap-6 md:hidden">
         {images_mobile.map((image, index) => (
           <GallerySlide key={index} {...image} />

@@ -13,8 +13,8 @@ export const ContactSection = () => {
       <div className="container">
         <SectionTitle title={title} />
 
-        <div className="mt-9 xl:flex xl:gap-[231px]">
-          <div className="mb-3 md:ml-[34px] md:flex md:gap-[90px] xl:ml-[107px]">
+        <div className="mt-9 md:mt-7 xl:flex xl:gap-[231px]">
+          <div className="mb-3 md:ml-[34px] md:flex md:gap-[90px] xl:ml-[107px] mdOnly:mb-16">
             <div className="mb-6 flex flex-col gap-6 md:mb-0 xl:mb-[124px] xl:gap-16">
               <ContactList data={phones} />
               <ContactList data={emails} />
