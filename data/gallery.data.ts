@@ -16,7 +16,7 @@ export const images = [
 ];
 
 export const images_mobile = [
+  { src: img3, alt: img3alt },
   { src: img1, alt: img1alt },
   { src: img2, alt: img2alt },
-  { src: img3, alt: img3alt },
 ];

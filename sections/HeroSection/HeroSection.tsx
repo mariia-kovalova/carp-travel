@@ -17,13 +17,13 @@ export const HeroSection = () => (
           className="mb-6 md:mb-[68px] xl:mb-[148px]"
         />
 
-        <p className="text-[10px] leading-4 md:text-sm md:tracking-[1.26px] xl:text-base xl:leading-[24px] xl:tracking-[1.44px] mdOnly:w-[264px]">
+        <p className="text-[10px] leading-4 md:text-sm md:tracking-[1.26px] xl:text-base xl:leading-[24px] xl:tracking-[1.44px] smOnly:w-[157px] mdOnly:w-[264px]">
           {p1}
         </p>
       </div>
 
       <div>
-        <div className="right-[20px] top-[-70px] flex flex-col gap-1 uppercase md:mb-14 md:gap-4 xl:mb-[181px] xl:gap-7 smOnly:absolute">
+        <div className="right-[15px] top-[-64px] flex flex-col gap-1 uppercase md:mb-14 md:gap-4 xl:mb-[181px] xl:gap-7 smOnly:absolute">
           <p className="text-[37px] md:text-[67px] xl:text-[98px]">
             <span className="font-medium">{p2._p1}</span>
             <span className="font-thin smOnly:tracking-[1.6px] mdOnly:tracking-[8.71px]">

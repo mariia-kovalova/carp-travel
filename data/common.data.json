@@ -1,4 +1,8 @@
 {
   "title": "CarpTravel",
-  "description": "We offer you unforgettable trips to the most beautiful parts of the Carpathians. Enjoy stunning views, exciting expeditions, and the best service!"
+  "description": "We offer you unforgettable trips to the most beautiful parts of the Carpathians. Enjoy stunning views, exciting expeditions, and the best service!",
+  "mob_menu": {
+    "open": "menu",
+    "close": "close"
+  }
 }

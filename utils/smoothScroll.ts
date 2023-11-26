@@ -3,9 +3,7 @@ const smoothScroll = (e: React.MouseEvent<HTMLElement>, href: string) => {
 
   if (href) {
     const targetElement = document.getElementById(href);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (targetElement) targetElement.scrollIntoView({ behavior: 'smooth' });
   }
 };
 

@@ -6,10 +6,7 @@ import logo from '@/public/images/common/logo.png';
 import { LogoProps } from './types';
 
 export const Logo: React.FC<LogoProps> = ({ className }) => {
-  const logoClasses = classNames(
-    'p-[4px] font-katarina transition-colors hover:bg-white/5 focus:bg-white/5 active:bg-white/5',
-    className,
-  );
+  const logoClasses = classNames('block pt-2 font-katarina', className);
 
   return (
     <a className={logoClasses} href="./">
@@ -17,10 +14,10 @@ export const Logo: React.FC<LogoProps> = ({ className }) => {
         className="h-auto"
         src={logo}
         alt="carp travel logo"
-        width="61"
+        width="60"
         priority
       />
-      <p className="mt-[2px] leading-[14px] tracking-[.185em]">{data.title}</p>
+      <p className="mt-[1px] leading-[14px] tracking-[.185em]">{data.title}</p>
     </a>
   );
 };

@@ -3,15 +3,23 @@
     "text": "contact",
     "accent": "us"
   },
-  "phone": {
+  "phones": {
     "title": "Phone number",
-    "items": ["+38 (098) 12 34 567", "+38 (073) 12 34 567"]
+    "items": [
+      { "text": "+38 (098) 12 34 567", "href": "tel:+380981234567" },
+      { "text": "+38 (073) 12 34 567", "href": "tel:+380731234567" }
+    ]
   },
-  "email": {
+  "emails": {
     "title": "E-mail",
-    "items": ["support@carptravel.com"]
+    "items": [
+      {
+        "text": "support@carptravel.com",
+        "href": "mailto:support@carptravel.com"
+      }
+    ]
   },
-  "social": {
+  "socials": {
     "title": "Follow us",
     "items": [
       { "href": "", "text": "facebook" },
@@ -20,28 +28,30 @@
       { "href": "", "text": "tiktok" }
     ]
   },
-  "fields": [
-    {
-      "id": "name_contact",
-      "inputName": "name",
-      "label": "Full name",
-      "type": "text",
-      "placeholder": "John Smith"
+  "form": {
+    "fields": [
+      {
+        "id": "name_contact",
+        "inputName": "name",
+        "label": "Full name",
+        "type": "text",
+        "placeholder": "John Smith"
+      },
+      {
+        "id": "email_contact",
+        "inputName": "email",
+        "label": "E-mail",
+        "type": "email",
+        "placeholder": "johnsmith@email.com"
+      }
+    ],
+    "textarea": {
+      "id": "textarea_contact",
+      "inputName": "message",
+      "label": "Message"
     },
-    {
-      "id": "email_contact",
-      "inputName": "email",
-      "label": "E-mail",
-      "type": "email",
-      "placeholder": "johnsmith@email.com"
+    "button": {
+      "text": "send"
     }
-  ],
-  "textarea": {
-    "id": "textarea_contact",
-    "inputName": "message",
-    "label": "Message"
-  },
-  "button": {
-    "text": "send"
   }
 }

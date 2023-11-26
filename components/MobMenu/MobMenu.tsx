@@ -2,6 +2,9 @@
 
 import { useState } from 'react';
 import { NavBar } from '../ui/NavBar';
+import data from '@/data/common.data.json';
+
+const { open, close } = data.mob_menu;
 
 export const MobMenu: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -14,11 +17,11 @@ export const MobMenu: React.FC = () => {
   return (
     <>
       <button
-        className="font-normal uppercase leading-normal tracking-[1.4px] md:hidden"
+        className="mt-[2px] block text-sm font-normal uppercase tracking-[1.4px] md:hidden"
         onClick={handleToggleMenu}
         type="button"
       >
-        menu
+        {open}
       </button>
 
       {showMenu ? (
@@ -29,7 +32,7 @@ export const MobMenu: React.FC = () => {
               type="button"
               onClick={handleToggleMenu}
             >
-              close
+              {close}
             </button>
             <NavBar variant="mobile-menu" onClick={handleToggleMenu} />
           </nav>

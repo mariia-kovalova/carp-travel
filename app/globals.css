@@ -44,6 +44,22 @@ body {
   @apply common-transition block px-[4px] py-2 text-[30px] font-medium uppercase hover:bg-white/20 focus:bg-white/20 active:bg-white/20;
 }
 
+.base-link {
+  @apply relative block w-full overflow-hidden;
+}
+
+.base-link::before {
+  @apply common-transition absolute bottom-0 h-[1px] w-full translate-x-[101%] bg-white content-[""];
+}
+
+.base-link:hover.base-link::before {
+  @apply translate-x-0;
+}
+
+.base-link:focus.base-link::before {
+  @apply translate-x-0;
+}
+
 /* === BACKGROUNDS === */
 
 .background-image {
@@ -117,10 +133,48 @@ body {
   );
 }
 
+.career {
+  @apply flex flex-col;
+}
+
+.career::before {
+  @apply h-[800px] w-full bg-cover bg-center bg-no-repeat content-[""];
+
+  background-image: image-set(
+    '/images/career/career-tablet@x1.webp' 1x,
+    '/images/career/career-tablet@x2.webp' 2x
+  );
+}
+
+.career::after {
+  @apply h-[826px] w-full bg-cover bg-center bg-no-repeat content-[""] md:hidden;
+
+  background-image: image-set(
+    '/images/career/career-tablet@x1.webp' 1x,
+    '/images/career/career-tablet@x2.webp' 2x
+  );
+}
+
+@media screen and (min-width: 1280px) {
+  .career {
+    background-image: image-set(
+      '/images/career/career@x1.webp' 1x,
+      '/images/career/career@x2.webp' 2x
+    );
+  }
+}
+
 .gallery {
   background-image: image-set(
     '/images/gallery/gallery@x1.webp' 1x,
     '/images/gallery/gallery@x2.webp' 2x
+  );
+}
+
+.contact {
+  background-image: image-set(
+    '/images/contact/contact@x1.webp' 1x,
+    '/images/contact/contact@x2.webp' 2x
   );
 }
 
@@ -129,7 +183,7 @@ body {
 /* pagination */
 
 .swiper-pagination-bullets {
-  @apply !top-[82vw] !flex !w-fit !flex-col !gap-4 !text-left sm:!top-[393px] md:!left-[484px] md:!top-0 xl:!left-[628px] xl:!gap-6;
+  @apply !top-[85vw] !flex !w-fit !flex-col !gap-4 !text-left sm:!top-[393px] md:!left-[484px] md:!top-0 xl:!left-[628px] xl:!gap-6;
 }
 
 .swiper-pagination-bullet {
@@ -174,4 +228,36 @@ body {
 
 .swiper-slide:nth-child(5) .comment {
   @apply xl:top-[216px];
+}
+
+/* === FORMS === */
+
+.field-input::placeholder {
+  @apply text-[13px] font-extralight leading-6 xl:text-xl;
+}
+
+.checkbox-indicator {
+  @apply relative cursor-pointer;
+}
+
+.checkbox-indicator::before,
+.checkbox-indicator::after {
+  @apply common-transition absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 content-[""];
+}
+
+.checkbox-indicator::before {
+  @apply h-[14px] w-[14px] bg-white/10 xl:h-4 xl:w-4;
+}
+
+.checkbox-indicator::after {
+  @apply h-8 w-8 bg-transparent xl:h-[34px] xl:w-[34px];
+}
+
+.checkbox-input:checked + .checkbox-indicator::before {
+  @apply bg-white;
+}
+
+.checkbox-input:hover + .checkbox-indicator::after,
+.checkbox-input:focus + .checkbox-indicator::after {
+  @apply bg-white/5;
 }

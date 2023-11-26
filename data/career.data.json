@@ -3,73 +3,76 @@
     "text": "choose",
     "accent": "us"
   },
-  "sub_title": "why us?",
-  "description_1": {
-    "text": "Your chance to join our passionate team in Carpathian tourism. Seeking talented professionals to share our common mission."
-  },
-  "description_2": [
-    {
-      "title": "Professional development",
-      "description": "We offer growth opportunities and a creative environment to nurture your talents."
-    },
-    {
-      "title": "Teamwork",
-      "description": "Join our close-knit family, where support and inspiration abound."
-    },
-    {
-      "title": "Stimulating work environment",
-      "description": "Flexibility and remote options for a comfortable experience."
-    },
-    {
-      "title": "Exciting challenges",
-      "description": "Unleash your potential through unforgettable projects showcasing Carpathian beauty"
+  "sub_title": "why us ?",
+  "content": {
+    "p1": "Your chance to join our passionate team in Carpathian tourism. Seeking talented professionals to share our common mission.",
+    "p2": [
+      {
+        "title": "Professional development",
+        "text": "We offer growth opportunities and a creative environment to nurture your talents."
+      },
+      {
+        "title": "Teamwork",
+        "text": "Join our close-knit family, where support and inspiration abound."
+      },
+      {
+        "title": "Stimulating work environment",
+        "text": "Flexibility and remote options for a comfortable experience."
+      },
+      {
+        "title": "Exciting challenges",
+        "text": "Unleash your potential through unforgettable projects showcasing Carpathian beauty"
+      }
+    ],
+    "p3": {
+      "_p1": "Don't miss your opportunity!",
+      "_p2": "Fill out the form right now and join our team!"
     }
-  ],
-  "description_3": {
-    "text": "Don't miss your opportunity! Fill out the form right now and join our team!"
   },
-  "fields": [
-    {
-      "id": "name_career",
-      "inputName": "name",
-      "label": "Full name",
-      "type": "text",
-      "placeholder": "John Smith"
+  "form": {
+    "fields": [
+      {
+        "id": "name_career",
+        "inputName": "name",
+        "label": "Full name",
+        "type": "text",
+        "placeholder": "John Smith"
+      },
+      {
+        "id": "email_career",
+        "inputName": "email",
+        "label": "E-mail",
+        "type": "email",
+        "placeholder": "johnsmith@email.com"
+      },
+      {
+        "id": "position_career",
+        "inputName": "position",
+        "label": "Position",
+        "type": "text",
+        "placeholder": "Movie maker"
+      },
+      {
+        "id": "phone_career",
+        "inputName": "phone",
+        "label": "Phone",
+        "type": "tel",
+        "placeholder": "(097) 12 34 567"
+      }
+    ],
+    "textarea": {
+      "id": "textarea_career",
+      "inputName": "message",
+      "label": "Message"
     },
-    {
-      "id": "email_career",
-      "inputName": "email",
-      "label": "E-mail",
-      "type": "email",
-      "placeholder": "johnsmith@email.com"
+    "checkbox": {
+      "id": "checkbox_career",
+      "type": "checkbox",
+      "inputName": "consent",
+      "label": "I confirm my consent to the processing of personal data."
     },
-    {
-      "id": "position_career",
-      "inputName": "position",
-      "label": "Position",
-      "type": "text",
-      "placeholder": "Movie maker"
-    },
-    {
-      "id": "phone_career",
-      "inputName": "phone",
-      "label": "Phone",
-      "type": "tel",
-      "placeholder": "(097) 12 34 567"
+    "button": {
+      "text": "send"
     }
-  ],
-  "textarea": {
-    "id": "textarea_career",
-    "inputName": "message",
-    "label": "Message"
-  },
-  "checkbox": {
-    "id": "checkbox_career",
-    "type": "checkbox",
-    "inputName": "consent",
-    "label": "I confirm my consent to the processing of personal data."
-  },
-  "button": {
-    "text": "send"
   }
 }

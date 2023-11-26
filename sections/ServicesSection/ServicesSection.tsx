@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 import { Slider } from '@/components/ui/Slider';
 import { ServicesSlide } from '@/components/ui/ServicesSlide';
-import { ServicesTitle } from '@/components/ui/ServicesTitle/ServicesTitle';
+import { ServicesTitle } from '@/components/ServicesTitle/ServicesTitle';
 
 import { services } from '@/data/links.data';
 import data from '@/data/services.data.json';
@@ -23,7 +23,7 @@ export const ServicesSection = () => {
     <section id={services} className={sectionClasses}>
       <div className="container">
         <ServicesTitle
-          className="mb-6"
+          className="mb-8"
           title={title}
           number={activeSlideIndex + 1}
         />
