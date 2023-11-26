@@ -44,8 +44,8 @@ export const ContactForm = () => {
       onSubmit={handleSubmit(onSubmit)}
       autoComplete="off"
     >
-      <div className="mb-[6px] md:flex md:gap-[20px] xl:flex-col xl:gap-[24px]">
-        <ul className="md:w-[221px] xl:mb-[24px] xl:flex xl:w-[607px] xl:gap-[28px]">
+      <div className="mb-[6px] md:flex md:gap-5 xl:h-[300px] xl:flex-col xl:gap-11">
+        <ul className="md:w-[221px] xl:flex xl:h-[58px] xl:w-[607px] xl:gap-7">
           {fields.map(field => (
             <li
               className="xl:basis-[calc((50%-14px))] notXl:mb-6"
@@ -63,7 +63,7 @@ export const ContactForm = () => {
         />
       </div>
 
-      <SubmitBtn className="ml-auto mt-4 md:mt-3" text={button.text} />
+      <SubmitBtn className="ml-auto mt-4 md:mt-3 xl:mt-6" text={button.text} />
     </form>
   );
 };

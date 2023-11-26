@@ -9,16 +9,17 @@ export const ContactList: React.FC<ContactListProps> = ({
   const { title, items } = data;
 
   const wrapperClasses = classNames('flex gap-5', {
-    'flex-row-reverse': isInversed,
+    'notXl:flex-row-reverse xl:justify-end': isInversed,
     'justify-end': !isInversed,
   });
 
   const listClasses = classNames(
-    'flex flex-col leading-6 md:text-base xl:text-lg',
-    { 'w-[81px]': isInversed },
+    'flex flex-col leading-6 md:text-base xl:text-lg xl:leading-6',
+    { 'w-[81px] xl:w-fit': isInversed },
   );
 
   const titleClasses = classNames('text-xs leading-5 xl:leading-6', {
+    'xl:w-[81px]': isInversed,
     'w-[81px]': !isInversed,
   });
 

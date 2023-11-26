@@ -13,7 +13,7 @@ export const NavBar: React.FC<NavBarProps> = ({
   const navBarClasses = classNames(
     'flex gap-12',
     {
-      'mdOnly:gap-6 mt-4': variant === 'header',
+      'mt-4 gap-12 md:gap-6 xl:gap-[54px]': variant === 'header',
       'flex-col': variant === 'mobile-menu',
     },
     className,

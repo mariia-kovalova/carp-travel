@@ -7,8 +7,8 @@ const { title, content } = data;
 const { p1, p2, p3, button } = content;
 
 export const HeroSection = () => (
-  <section className="section hero background-image md:pt-[124px] xl:pt-[140px] smOnly:pt-[182px]">
-    <div className="container relative flex flex-col gap-6 md:flex-row md:gap-12 xl:gap-[326px]">
+  <section className="section hero background-image md:pt-[124px] xl:pt-[132px] smOnly:pt-[182px]">
+    <div className="container relative flex flex-col gap-6 md:flex-row md:gap-12 xl:gap-[316px]">
       <div>
         <SectionTitle
           tag="h1"
@@ -23,7 +23,7 @@ export const HeroSection = () => (
       </div>
 
       <div className="md:w-[230px] xl:w-[294px]">
-        <div className="right-[15px] top-[-64px] uppercase md:mb-14 md:mt-7 md:gap-4 xl:mb-[181px] xl:gap-7 smOnly:absolute">
+        <div className="right-[15px] top-[-64px] uppercase md:mb-14 md:mt-7 md:gap-4 xl:mb-[190px] xl:mt-12 xl:gap-7 smOnly:absolute">
           <div className="flex text-[37px] md:mb-5 md:text-[67px] xl:text-[98px]">
             <p className="font-medium">{p2._p1}</p>
             <p className="font-thin tracking-[1.6px] md:tracking-[8.71px] xl:tracking-normal">
