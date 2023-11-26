@@ -17,7 +17,7 @@ export const HeroSection = () => (
           className="mb-6 md:mb-[68px] xl:mb-[148px]"
         />
 
-        <p className="text-[10px] leading-4 md:text-sm md:tracking-[1.26px] xl:text-base xl:leading-[24px] xl:tracking-[1.44px] smOnly:w-[157px] mdOnly:w-[264px]">
+        <p className="w-[157px] text-[10px] leading-4 sm:w-fit md:w-[262px] md:text-sm md:tracking-[1.26px] xl:w-fit xl:text-base xl:leading-[24px] xl:tracking-[1.44px] mdOnly:w-[264px]">
           {p1}
         </p>
       </div>

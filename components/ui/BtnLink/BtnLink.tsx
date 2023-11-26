@@ -11,7 +11,7 @@ export const BtnLink: React.FC<BtnLinkProps> = ({
   className = '',
 }) => {
   const btnClasses = classNames(
-    'relative block w-[280px] bg-white/10 px-[18px] py-[3px] md:w-full md:py-[1px] xl:p-[11px]',
+    'relative block bg-white/10 px-[18px] py-[3px] md:py-[1px] xl:p-[11px]',
     'transition-colors hover:bg-white/20 focus:bg-white/20 active:bg-white/20',
     className,
   );
