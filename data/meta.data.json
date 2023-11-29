@@ -1,0 +1,26 @@
+{
+  "title": "CarpTravel",
+  "description": "We offer you unforgettable trips to the most beautiful parts of the Carpathians. Enjoy stunning views, exciting expeditions, and the best service!",
+  "keywords": "CarpTravel, trips, the Carpathians, expeditions, views, travel",
+  "locale": "en",
+  "images": [
+    {
+      "url": "/meta/opengraph-image.png",
+      "width": 1200,
+      "height": 630,
+      "alt": "CarpTravel - Travelling Agency"
+    }
+  ],
+  "icons": {
+    "icon": [
+      {
+        "url": "/meta/favicon-black.png",
+        "media": "(prefers-color-scheme: light)"
+      },
+      {
+        "url": "/meta/favicon-white.png",
+        "media": "(prefers-color-scheme: dark)"
+      }
+    ]
+  }
+}

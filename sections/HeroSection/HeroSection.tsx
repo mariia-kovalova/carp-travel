@@ -23,8 +23,8 @@ export const HeroSection = () => (
       </div>
 
       <div className="md:w-[230px] xl:w-[294px]">
-        <div className="right-[15px] top-[-64px] uppercase md:mb-14 md:mt-7 md:gap-4 xl:mb-[190px] xl:mt-12 xl:gap-7 smOnly:absolute">
-          <div className="flex text-[37px] md:mb-5 md:text-[67px] xl:text-[98px]">
+        <div className="right-[15px] top-[-64px] uppercase md:mb-14 md:mt-7 xl:mb-[190px] xl:mt-12 smOnly:absolute">
+          <div className="mb-1 flex text-[37px] md:mb-5 md:text-[67px] xl:mb-8 xl:text-[98px]">
             <p className="font-medium">{p2._p1}</p>
             <p className="font-thin tracking-[1.6px] md:tracking-[8.71px] xl:tracking-normal">
               {p2._p2}

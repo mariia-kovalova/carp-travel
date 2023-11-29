@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { NavBar } from '../ui/NavBar';
-import data from '@/data/common.data.json';
+import data from '@/data/header.data.json';
 
 const { open, close } = data.mob_menu;
 

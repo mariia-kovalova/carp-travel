@@ -3,8 +3,8 @@ import { Inter, Karantina } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 
 import { Header } from '@/components/Header';
-import data from '@/data/common.data.json';
 
+import { meta } from '@/data/meta.data';
 import './globals.css';
 
 const inter = Inter({
@@ -20,33 +20,7 @@ const karantina = Karantina({
   variable: '--font-katarina',
 });
 
-// const { BASE_URL } = process.env;
-const { title, description } = data;
-
-export const metadata: Metadata = {
-  title: title,
-  description: description,
-  // icons: {
-  //   icon: [
-  //     {
-  //       url: 'favicon/favicon-black.png',
-  //       media: '(prefers-color-scheme: light)',
-  //     },
-  //     {
-  //       url: 'favicon/favicon-white.png',
-  //       media: '(prefers-color-scheme: dark)',
-  //     },
-  //   ],
-  // },
-  // openGraph: {
-  //   title: info.title,
-  //   description: info.description,
-  //   siteName: info.title,
-  //   type: 'website',
-  //   url: BASE_URL,
-  //   images: [{ url: 'images/ogp/logo.png' }, { url: 'images/ogp/logo.jpg' }],
-  // },
-};
+export const metadata: Metadata = meta;
 
 export default function RootLayout({
   children,

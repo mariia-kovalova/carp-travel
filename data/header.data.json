@@ -1,0 +1,7 @@
+{
+  "title": "CarpTravel",
+  "mob_menu": {
+    "open": "menu",
+    "close": "close"
+  }
+}

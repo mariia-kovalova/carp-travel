@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import classNames from 'classnames';
 
-import data from '@/data/common.data.json';
+import data from '@/data/header.data.json';
 import logo from '@/public/images/common/logo.png';
 import { LogoProps } from './types';
 
