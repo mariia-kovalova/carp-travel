@@ -5,6 +5,5 @@
     "size": "Max 16 characters"
   },
   "phoneMes": "Invalid phone",
-  "emailMes": "Invalid email",
-  "consentMes": "Confirm your concent"
+  "emailMes": "Invalid email"
 }

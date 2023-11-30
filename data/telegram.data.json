@@ -5,5 +5,10 @@
   "user_email": "Email: ",
   "user_position": "Position: ",
   "user_phone": "Phone number: ",
-  "user_message": "Message: "
+  "user_message": "Message: ",
+  "notify": {
+    "onSuccess": "Successfully submitted.",
+    "onNoConsent": "Confirm your concent",
+    "onError": "Something went wrong. Try again later."
+  }
 }

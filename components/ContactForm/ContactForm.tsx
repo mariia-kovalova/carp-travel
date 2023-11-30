@@ -14,9 +14,11 @@ import { StatusVariants } from '@/types/TelegramStatus';
 
 import { contact_form } from '@/data/storage.data';
 import { contact_schema } from '@/data/schemas.data';
+import messages from '@/data/telegram.data.json';
 import data from '@/data/contact.data.json';
 
 const { fields, textarea, button } = data.form;
+const { onSuccess, onError, onNoConsent } = messages.notify;
 
 export const ContactForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -45,11 +47,11 @@ export const ContactForm = () => {
       case 'default':
         return;
       case 'success':
-        notify.onSuccess('Success');
+        notify.onSuccess(onSuccess);
         setPopUpType('default');
         return;
       case 'error':
-        notify.onError('Error');
+        notify.onError(onError);
         setPopUpType('default');
         return;
     }

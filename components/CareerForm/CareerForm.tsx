@@ -15,11 +15,11 @@ import { getJobApplicationMessage, notify, sendDataToTelegram } from '@/utils';
 
 import { career_form } from '@/data/storage.data';
 import { career_schema } from '@/data/schemas.data';
+import messages from '@/data/telegram.data.json';
 import data from '@/data/career.data.json';
-import messages from '@/data/messages.data.json';
 
 const { fields, checkbox, textarea, button } = data.form;
-const { consentMes } = messages;
+const { onSuccess, onError, onNoConsent } = messages.notify;
 
 export const CareerForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -48,18 +48,18 @@ export const CareerForm = () => {
       case 'default':
         return;
       case 'success':
-        notify.onSuccess('Success');
+        notify.onSuccess(onSuccess);
         setPopUpType('default');
         return;
       case 'error':
-        notify.onError('Error');
+        notify.onError(onError);
         setPopUpType('default');
         return;
     }
   }, [popUpType]);
 
   const onSubmit = async (formData: FieldValues) => {
-    if (!formData.consent) return notify.onWarn(consentMes);
+    if (!formData.consent) return notify.onWarn(onNoConsent);
 
     try {
       setIsLoading(true);
