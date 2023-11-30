@@ -1,6 +1,6 @@
 # Carp Travel App
 
-![](.gitbook/assets/gallery-photo-2@x2.jpg)
+![](.gitbook/assets/opengraph-image.png)
 
 [Carp Travel App](https://carp-travel-sigma.vercel.app/) is a web application
 where you can find information about The CARPATHIAN’S.
