@@ -1,6 +1,7 @@
 'use client';
 
-import { useForm } from 'react-hook-form';
+import { useEffect, useState } from 'react';
+import { useForm, FieldValues } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import useFormPersist from 'react-hook-form-persist';
 
@@ -8,14 +9,21 @@ import { Field } from '@/components/ui/Field';
 import { Textarea } from '@/components/ui/Textarea';
 import { SubmitBtn } from '@/components/ui/SubmitBtn';
 
+import { getContactMessage, notify, sendDataToTelegram } from '@/utils';
+import { StatusVariants } from '@/types/TelegramStatus';
+
 import { contact_form } from '@/data/storage.data';
 import { contact_schema } from '@/data/schemas.data';
 import data from '@/data/contact.data.json';
-import notify from '@/utils/notify';
 
 const { fields, textarea, button } = data.form;
 
 export const ContactForm = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [popUpType, setPopUpType] = useState<StatusVariants | 'default'>(
+    'default',
+  );
+
   const {
     register,
     handleSubmit,
@@ -32,9 +40,33 @@ export const ContactForm = () => {
     setValue,
   });
 
-  const onSubmit = () => {
-    reset();
-    notify.onSuccess('Success');
+  useEffect(() => {
+    switch (popUpType) {
+      case 'default':
+        return;
+      case 'success':
+        notify.onSuccess('Success');
+        setPopUpType('default');
+        return;
+      case 'error':
+        notify.onError('Error');
+        setPopUpType('default');
+        return;
+    }
+  }, [popUpType]);
+
+  const onSubmit = async (formData: FieldValues) => {
+    try {
+      setIsLoading(true);
+      const message = getContactMessage(formData);
+      const status: StatusVariants = await sendDataToTelegram(message);
+      setPopUpType(status);
+      reset();
+    } catch (error) {
+      setPopUpType('error');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -62,7 +94,11 @@ export const ContactForm = () => {
         />
       </div>
 
-      <SubmitBtn className="ml-auto mt-4 md:mt-3 xl:mt-6" text={button.text} />
+      <SubmitBtn
+        className="ml-auto mt-4 md:mt-3 xl:mt-6"
+        text={button.text}
+        isLoading={isLoading}
+      />
     </form>
   );
 };

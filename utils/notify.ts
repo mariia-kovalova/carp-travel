@@ -1,6 +1,6 @@
 import toast from 'react-hot-toast';
 
-const notify = {
+export const notify = {
   onSuccess: (message: string) => toast.success(message),
   onWarn: (message: string) =>
     toast.error(message, {
@@ -8,5 +8,3 @@ const notify = {
     }),
   onError: (message: string) => toast.error(message),
 };
-
-export default notify;

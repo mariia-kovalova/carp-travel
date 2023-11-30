@@ -1,7 +1,7 @@
 'use client';
 
 import classNames from 'classnames';
-import smoothScroll from '@/utils/smoothScroll';
+import { smoothScroll } from '@/utils';
 import { BtnLinkProps } from './types';
 import { BtnFrame } from './BtnFrame';
 

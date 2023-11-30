@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import smoothScroll from '@/utils/smoothScroll';
+import { smoothScroll } from '@/utils';
 import { NavLinkProps } from './types';
 
 export const NavLink: React.FC<NavLinkProps> = ({

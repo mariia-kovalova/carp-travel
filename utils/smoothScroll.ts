@@ -1,4 +1,7 @@
-const smoothScroll = (e: React.MouseEvent<HTMLElement>, href: string) => {
+export const smoothScroll = (
+  e: React.MouseEvent<HTMLElement>,
+  href: string,
+) => {
   e.preventDefault();
 
   if (href) {
@@ -6,5 +9,3 @@ const smoothScroll = (e: React.MouseEvent<HTMLElement>, href: string) => {
     if (targetElement) targetElement.scrollIntoView({ behavior: 'smooth' });
   }
 };
-
-export default smoothScroll;

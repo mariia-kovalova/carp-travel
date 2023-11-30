@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { useForm, FieldValues } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import useFormPersist from 'react-hook-form-persist';
@@ -9,9 +10,11 @@ import { Textarea } from '@/components/ui/Textarea';
 import { Checkbox } from '@/components/ui/Checkbox';
 import { SubmitBtn } from '@/components/ui/SubmitBtn';
 
+import { StatusVariants } from '@/types/TelegramStatus';
+import { getJobApplicationMessage, notify, sendDataToTelegram } from '@/utils';
+
 import { career_form } from '@/data/storage.data';
 import { career_schema } from '@/data/schemas.data';
-import notify from '@/utils/notify';
 import data from '@/data/career.data.json';
 import messages from '@/data/messages.data.json';
 
@@ -19,6 +22,11 @@ const { fields, checkbox, textarea, button } = data.form;
 const { consentMes } = messages;
 
 export const CareerForm = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [popUpType, setPopUpType] = useState<StatusVariants | 'default'>(
+    'default',
+  );
+
   const {
     register,
     handleSubmit,
@@ -35,10 +43,35 @@ export const CareerForm = () => {
     setValue,
   });
 
-  const onSubmit = (values: FieldValues) => {
-    if (!values.consent) return notify.onWarn(consentMes);
-    reset();
-    notify.onSuccess('Success');
+  useEffect(() => {
+    switch (popUpType) {
+      case 'default':
+        return;
+      case 'success':
+        notify.onSuccess('Success');
+        setPopUpType('default');
+        return;
+      case 'error':
+        notify.onError('Error');
+        setPopUpType('default');
+        return;
+    }
+  }, [popUpType]);
+
+  const onSubmit = async (formData: FieldValues) => {
+    if (!formData.consent) return notify.onWarn(consentMes);
+
+    try {
+      setIsLoading(true);
+      const message = getJobApplicationMessage(formData);
+      const status: StatusVariants = await sendDataToTelegram(message);
+      setPopUpType(status);
+      reset();
+    } catch (error) {
+      setPopUpType('error');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -67,8 +100,9 @@ export const CareerForm = () => {
         <Checkbox register={register} {...checkbox} />
 
         <SubmitBtn
-          className="mt-4 md:mt-[-22px] xl:mt-[-26px] smOnly:ml-auto"
+          className="smOnly:ml-auto"
           text={button.text}
+          isLoading={isLoading}
         />
       </div>
     </form>
